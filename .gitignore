@@ -1,0 +1,13 @@
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+frontend/.next/
+backend/.data/
+backend/uploads/
+.local-backup/
+*.tsbuildinfo
+coverage/
+tmp/
+output/
