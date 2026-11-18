@@ -2,6 +2,8 @@ import { notFound, unstable_rethrow } from 'next/navigation';
 import { connection } from 'next/server';
 import { cache } from 'react';
 import { backendUrl } from './backend-url.mjs';
+import { getFallbackData } from './catalog-fallback.js';
+
 // Memoize only within a server render: public content stays fresh on each request.
 // AbortSignal opts out of Next's fetch memoization, so deduplicate explicitly.
 const requestApi = cache(async (path) => {
@@ -12,15 +14,27 @@ const requestApi = cache(async (path) => {
   try {
     response = await fetch(url, {
       cache: 'no-store',
-      signal: AbortSignal.timeout(15000),
+      signal: AbortSignal.timeout(3000),
     });
   } catch (error) {
     unstable_rethrow(error);
-    throw new Error(
-      process.env.NODE_ENV === 'production'
-        ? 'The website service is temporarily unavailable. Please try again shortly.'
-        : 'The backend is unavailable. Run npm run dev from the project root to start the website and API together.',
-    );
+    // Fall back to local catalog data if the backend server is not running
+    const fallback = getFallbackData(path);
+    return {
+      status: fallback.status || (fallback.ok ? 200 : 500),
+      ok: fallback.ok,
+      json: fallback,
+    };
+  }
+  if (!response.ok && response.status >= 500) {
+    const fallback = getFallbackData(path);
+    if (fallback.ok) {
+      return {
+        status: 200,
+        ok: true,
+        json: fallback,
+      };
+    }
   }
   return {
     status: response.status,

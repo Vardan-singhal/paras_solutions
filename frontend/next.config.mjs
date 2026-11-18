@@ -1,4 +1,4 @@
-import { loadFrontendEnv } from '../scripts/load-env.mjs';
+import { loadFrontendEnv } from './scripts/load-env.mjs';
 loadFrontendEnv();
 export default {
   poweredByHeader: false,
