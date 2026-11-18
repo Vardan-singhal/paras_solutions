@@ -1,5 +1,7 @@
 # Deployment
 
+For Vercel, follow [Vercel services deployment](vercel-services.md). Its public gateway and generated binding replace the standalone proxy configuration described below.
+
 ## Architecture
 
 Next.js serves the public website and proxies `/api/v1` to Express. Express connects to MongoDB. Production uploads use authenticated Cloudinary assets; email uses configured SMTP. There is no administrative UI or public administrative mutation API.

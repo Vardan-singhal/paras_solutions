@@ -84,7 +84,8 @@ export function PageHero({ eyebrow, title, lead, crumbs = [], children }) {
     </section>
   );
 }
-export function ProductCard({ product, index = 0 }) {
+export function ProductCard({ product, index = 0, headingLevel = 'h3' }) {
+  const Heading = headingLevel;
   return (
     <Reveal delay={(index % 3) * 0.06} className="h-100">
       <article className="product-card h-100">
@@ -102,9 +103,9 @@ export function ProductCard({ product, index = 0 }) {
         </Link>
         <div className="product-card__body">
           <p className="eyebrow">{product.categoryName}</p>
-          <h3>
+          <Heading>
             <Link href={`/products/${product.slug}`}>{product.name}</Link>
-          </h3>
+          </Heading>
           <p>{product.summary}</p>
           <Link className="text-link" href={`/products/${product.slug}`}>
             Explore product <ArrowRight size={16} />
@@ -114,12 +115,12 @@ export function ProductCard({ product, index = 0 }) {
     </Reveal>
   );
 }
-export function ProductGrid({ products }) {
+export function ProductGrid({ products, headingLevel = 'h3' }) {
   return (
     <div className="row g-4">
       {products.map((p, i) => (
         <div className="col-md-6 col-xl-4" key={p.slug}>
-          <ProductCard product={p} index={i} />
+          <ProductCard product={p} index={i} headingLevel={headingLevel} />
         </div>
       ))}
     </div>
@@ -222,7 +223,8 @@ export function EmptyState({ title, text }) {
     </div>
   );
 }
-export function ArticleCard({ article, type = 'blog' }) {
+export function ArticleCard({ article, type = 'blog', headingLevel = 'h3' }) {
+  const Heading = headingLevel;
   const date = new Date(article.publishedAt).toLocaleDateString('en-IN', {
     day: 'numeric',
     month: 'short',
@@ -247,12 +249,13 @@ export function ArticleCard({ article, type = 'blog' }) {
       <p className="article-meta">
         {article.category} · <time dateTime={article.publishedAt}>{date}</time>
       </p>
-      <h3>
+      <Heading>
         <Link href={`/${type}/${article.slug}`}>{article.title}</Link>
-      </h3>
+      </Heading>
       <p>{article.excerpt}</p>
       <Link className="text-link" href={`/${type}/${article.slug}`}>
-        Read more <ArrowRight size={16} />
+        Read <span className="visually-hidden">{article.title}</span> article{' '}
+        <ArrowRight size={16} />
       </Link>
     </article>
   );

@@ -112,7 +112,7 @@ function Navigation({ company, products, categories, industries, pathname }) {
               alt="Paras Prints Solutions"
               width={1808}
               height={710}
-              priority
+              loading="eager"
               sizes="145px"
             />
           </Link>

@@ -81,10 +81,10 @@ const gallery = await (await fetch(api + '/gallery?limit=100')).json();
 assert.equal(gallery.meta.total, 62);
 const settings = await (await fetch(base + '/api/v1/calculator/settings')).json();
 assert.equal(settings.data.rates, undefined);
-assert.equal(
-  (await fetch(base + '/api/v1/quotations')).status,
-  process.env.INTERNAL_API_KEY ? 401 : 503,
-);
+// The verifier does not know the backend service's private environment.
+// Both a configured key (401) and disabled private integrations (503) must deny access.
+const privateStatus = (await fetch(base + '/api/v1/quotations')).status;
+assert([401, 503].includes(privateStatus), `Private quotations exposed: ${privateStatus}`);
 console.log(
   `Verified ${pages.length} pages, ${internalLinks.size} internal links, all 62 original and optimized image URLs, downloads, metadata, redirects, missing-content routes, and the API proxy.`,
 );

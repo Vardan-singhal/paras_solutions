@@ -4,7 +4,18 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 let localServer;
+let connectionPromise;
 export async function connectDatabase({ local = false, test = false } = {}) {
+  if (mongoose.connection.readyState === 1) return mongoose.connection;
+  if (!connectionPromise) {
+    connectionPromise = openDatabase({ local, test }).finally(() => {
+      connectionPromise = undefined;
+    });
+  }
+  return connectionPromise;
+}
+
+async function openDatabase({ local, test }) {
   let uri = process.env.MONGODB_URI;
   if (test || (!uri && local)) {
     const { MongoMemoryServer } = await import('mongodb-memory-server-core');
@@ -38,8 +49,13 @@ export async function connectDatabase({ local = false, test = false } = {}) {
     maxPoolSize: 10,
     autoIndex: process.env.NODE_ENV !== 'production',
   });
+  return mongoose.connection;
 }
 export async function disconnectDatabase() {
+  connectionPromise = undefined;
   await mongoose.disconnect();
-  if (localServer) await localServer.stop();
+  if (localServer) {
+    await localServer.stop();
+    localServer = undefined;
+  }
 }

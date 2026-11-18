@@ -127,6 +127,8 @@ npm test                 # Real MongoDB, REST, uploads, privacy and local SMTP t
 npm run lint             # Frontend ESLint
 npm run build            # Next.js production build
 npm run verify           # Requires both local services; crawls pages/links/images
+npm run verify:browser   # Chrome interaction and desktop/mobile screenshot checks
+npm run audit:desktop    # Desktop Lighthouse on the production site at localhost:3000
 ```
 
 `npm run verify` checks public pages, canonical metadata, internal links, all supplied and optimized images, API proxying, redirects, missing-content responses and the profile download. It is an HTTP check, not a replacement for a browser viewport/accessibility audit. Current verification and remaining limits are recorded in [QA](documentation/qa.md).
@@ -139,6 +141,8 @@ npm run assets:review
 ```
 
 ## Production
+
+For one Vercel project containing both services, use the root `vercel.json` and follow [Vercel services deployment](documentation/vercel-services.md). Vercel injects `BACKEND_URL` for frontend server requests; do not set it manually. The steps below apply to standalone Node/Docker hosting.
 
 1. Configure the backend with `NODE_ENV=production`, a production `MONGODB_URI`, allowed `FRONTEND_ORIGINS`, SMTP/Cloudinary values and random private keys.
 2. Configure frontend `API_INTERNAL_URL` and `NEXT_PUBLIC_SITE_URL` to the real backend and public origin. Set `API_INTERNAL_URL` **at build time as well as runtime**, because Next.js proxy destinations are compiled into routing configuration.
@@ -165,7 +169,9 @@ Container configuration, Atlas setup, secrets, proxy/upload limits, backups and 
 
 The site includes server-rendered content, unique product/industry/article metadata, canonical URLs, Open Graph images, a dynamic sitemap, robots rules, breadcrumbs and accurate Organization/WebSite/Product/Article JSON-LD. No fake offers or ratings are added. Utility pages are noindexed. FAQ accordions use native `details`; no unsupported rich-result promise is made.
 
-Bootstrap 5 grids, Manrope/Inter, plain CSS, Lucide icons and restrained Framer Motion reveals are used. Content remains visible without animations. Native dialogs provide modal focus containment. Reduced motion disables autoplay unless explicitly started and suppresses movement.
+Bootstrap 5 grids, Manrope/Inter, plain CSS, Lucide icons and native below-fold reveals are used. Content remains visible without animations. Native dialogs provide modal focus containment. Reduced motion disables autoplay unless explicitly started and suppresses movement.
+
+Audit production output with `npm run build`, then `npm start -w frontend` while the backend is running. Development mode includes debugging and hot-reload scripts and is not representative of production performance. `npm run audit:desktop -- --all` audits every indexable public page and saves full HTML/JSON reports under `output/lighthouse/`. Lighthouse tooling requires Node 22.19+ (Node 24 recommended) and an installed Chrome; use `CHROME_PATH` if automatic discovery fails. See [performance verification](documentation/performance.md).
 
 Optional GA4 uses `NEXT_PUBLIC_GA_ID`; no analytics script loads until allowed through **Analytics preferences** in the footer. Conversion hooks cover quote/contact/calculator submissions and phone/email/WhatsApp links. Search Console verification is environment-configured. Review privacy and consent requirements for the actual launch jurisdiction and providers.
 

@@ -16,12 +16,15 @@
     "lint": "npm run lint -w frontend",
     "seed": "npm run seed -w backend",
     "verify": "node scripts/verify-site.mjs",
+    "audit:desktop": "node scripts/audit-desktop.mjs",
+    "verify:browser": "node scripts/verify-browser.mjs",
     "assets:profile": "node scripts/create-profile.mjs",
     "assets:review": "node scripts/render-profile.mjs",
     "format": "prettier --write frontend/src backend/src backend/tests scripts documentation README.md"
   },
   "devDependencies": {
     "@napi-rs/canvas": "^1.1.1",
+    "lighthouse": "13.5.0",
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^6.5.438",
     "prettier": "^3.6.2"

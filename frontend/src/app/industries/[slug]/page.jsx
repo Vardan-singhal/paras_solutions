@@ -29,7 +29,8 @@ export default async function Industry({ params }) {
                 width={i.image.width}
                 height={i.image.height}
                 sizes="(max-width:991px) 100vw,50vw"
-                priority
+                loading="eager"
+                fetchPriority="high"
               />
               <p className="image-note">Illustrative industry visual.</p>
             </div>

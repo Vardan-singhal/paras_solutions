@@ -7,6 +7,7 @@ import request from 'supertest';
 import { connectDatabase, disconnectDatabase } from '../src/config/database.js';
 import { seed } from '../src/seed.js';
 import { createApp } from '../src/app.js';
+import serviceApp from '../src/index.js';
 import { Enquiry, Quotation, CalculatorSubmission, Media, Product } from '../src/models/index.js';
 import { notifySubmission } from '../src/services/email.js';
 import { calculate } from '../src/services/calculator.js';
@@ -69,6 +70,30 @@ before(async () => {
 after(async () => {
   if (mongoose.connection.readyState === 1) await mongoose.connection.dropDatabase();
   await disconnectDatabase();
+});
+
+test('exported Vercel entrypoint serves the original API prefix with a reused connection', async () => {
+  const [health, products] = await Promise.all([
+    request(serviceApp).get('/api/v1/health'),
+    request(serviceApp).get('/api/v1/products'),
+  ]);
+  assert.equal(health.status, 200);
+  assert.equal(products.status, 200);
+  assert.equal(products.body.data.length, 9);
+  assert.equal((await request(serviceApp).get('/products')).status, 404);
+});
+
+test('database initialization failure returns 503 without exposing credentials', async () => {
+  const unavailable = createApp({
+    initialize: async () => {
+      throw new Error('mongodb://private-credentials@example.invalid');
+    },
+  });
+  const response = await request(unavailable).get('/api/v1/products');
+  assert.equal(response.status, 503);
+  assert.equal(response.body.ok, false);
+  assert(!JSON.stringify(response.body).includes('private-credentials'));
+  assert.match(response.body.error.message, /database is temporarily unavailable/);
 });
 test('public catalogue, pagination, filtering and unpublished content', async () => {
   const all = await request(app).get('/api/v1/products');

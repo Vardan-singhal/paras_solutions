@@ -56,7 +56,8 @@ export default async function ResourceDetail({ type, slug }) {
               alt={a.featuredImage.alt}
               width={a.featuredImage.width}
               height={a.featuredImage.height}
-              priority
+              loading="eager"
+              fetchPriority="high"
               sizes="(max-width:991px) 100vw,1100px"
             />
           )}

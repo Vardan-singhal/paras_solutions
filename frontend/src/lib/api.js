@@ -1,9 +1,16 @@
 import { notFound, unstable_rethrow } from 'next/navigation';
-const origin = process.env.API_INTERNAL_URL || 'http://127.0.0.1:4000';
-export async function api(path, { missingIs404 = false } = {}) {
+import { connection } from 'next/server';
+import { cache } from 'react';
+import { backendUrl } from './backend-url.mjs';
+// Memoize only within a server render: public content stays fresh on each request.
+// AbortSignal opts out of Next's fetch memoization, so deduplicate explicitly.
+const requestApi = cache(async (path) => {
+  // Service bindings exist at request time, not while Next.js builds the site.
+  await connection();
+  const url = backendUrl(path);
   let response;
   try {
-    response = await fetch(`${origin}/api/v1${path}`, {
+    response = await fetch(url, {
       cache: 'no-store',
       signal: AbortSignal.timeout(15000),
     });
@@ -15,11 +22,18 @@ export async function api(path, { missingIs404 = false } = {}) {
         : 'The backend is unavailable. Run npm run dev from the project root to start the website and API together.',
     );
   }
+  return {
+    status: response.status,
+    ok: response.ok,
+    json: response.ok ? await response.json() : null,
+  };
+});
+export async function api(path, { missingIs404 = false } = {}) {
+  const response = await requestApi(path);
   if (response.status === 404 && missingIs404) notFound();
   if (!response.ok)
     throw new Error('Content is temporarily unavailable. Please try again shortly.');
-  const json = await response.json();
-  return json;
+  return response.json;
 }
 export async function content(path, options) {
   return (await api(path, options)).data;

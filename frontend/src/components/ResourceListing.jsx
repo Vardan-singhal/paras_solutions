@@ -78,7 +78,7 @@ export default async function ResourceListing({ type, searchParams }) {
                         : 'col-md-6 col-lg-4'
                     }
                   >
-                    <ArticleCard article={article} type={type} />
+                    <ArticleCard article={article} type={type} headingLevel="h2" />
                   </div>
                 ))}
               </div>

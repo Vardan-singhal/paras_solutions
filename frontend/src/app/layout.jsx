@@ -2,6 +2,7 @@ import { Manrope, Inter } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Analytics from '@/components/Analytics';
+import RevealEffects from '@/components/RevealEffects';
 import { content, siteUrl, jsonLd } from '@/lib/api';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import './globals.css';
@@ -10,6 +11,7 @@ const body = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap
 export const dynamic = 'force-dynamic';
 export const metadata = {
   metadataBase: new URL(siteUrl()),
+  icons: { icon: [{ url: '/assets/logo.png', type: 'image/png' }] },
   title: {
     default: 'Paras Prints Solutions | Packaging & Commercial Print',
     template: '%s | Paras Prints Solutions',
@@ -44,14 +46,20 @@ export default async function RootLayout({ children }) {
           Skip to content
         </a>
         <Header
-          company={company}
-          products={products}
-          categories={categories}
-          industries={industries}
+          company={{ phone: company.phone, phoneHref: company.phoneHref }}
+          products={products.map(({ slug, name, categorySlug, summary }) => ({
+            slug,
+            name,
+            categorySlug,
+            summary,
+          }))}
+          categories={categories.map(({ slug, name }) => ({ slug, name }))}
+          industries={industries.map(({ slug, name }) => ({ slug, name }))}
         />
         <main id="main">{children}</main>
         <Footer company={company} products={products} industries={industries} />
         <Analytics />
+        <RevealEffects />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(schema) }} />
       </body>
     </html>

@@ -42,27 +42,13 @@ function missingPage() {
   );
 }
 
-export async function proxy(request) {
+export function proxy(request) {
   const path = request.nextUrl.pathname;
   if (pages.has(path)) return NextResponse.next();
   const match = path.match(/^\/(products|industries|blog|case-studies)\/([a-z0-9-]{1,100})$/);
   if (!match) return missingPage();
-  const endpoints = {
-    products: 'products',
-    industries: 'industries',
-    blog: 'blogs',
-    'case-studies': 'case-studies',
-  };
-  try {
-    const origin = process.env.API_INTERNAL_URL || 'http://127.0.0.1:4000';
-    const result = await fetch(`${origin}/api/v1/${endpoints[match[1]]}/${match[2]}`, {
-      cache: 'no-store',
-      signal: AbortSignal.timeout(5000),
-    });
-    if (result.status === 404 || result.status === 422) return missingPage();
-  } catch {
-    // Let the normal application service-error boundary handle an API outage.
-  }
+  // Record availability is checked by generateMetadata/page server functions.
+  // Middleware cannot use Vercel service bindings.
   return NextResponse.next();
 }
 

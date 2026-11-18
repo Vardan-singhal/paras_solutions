@@ -60,7 +60,7 @@ export default async function Products({ searchParams }) {
           </form>
           <p className="results-count">{result.meta.total} products</p>
           {result.data.length ? (
-            <ProductGrid products={result.data} />
+            <ProductGrid products={result.data} headingLevel="h2" />
           ) : (
             <EmptyState
               title="Let’s discuss a custom requirement."

@@ -1,12 +1,13 @@
 'use client';
 import Image from 'next/image';
 import { useEffect, useState, useRef } from 'react';
-import { useReducedMotion } from 'framer-motion';
+import useReducedMotion from '@/lib/use-reduced-motion';
 import { ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
 export default function HeroSlider({ slides }) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [manualPlay, setManualPlay] = useState(false);
+  const [prepared, setPrepared] = useState(false);
   const reduced = useReducedMotion();
   const ref = useRef(null);
   const playing = !paused && (!reduced || manualPlay);
@@ -43,13 +44,17 @@ export default function HeroSlider({ slides }) {
             aria-roledescription="slide"
             aria-label={`${i + 1} of ${slides.length}`}
           >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              sizes="(max-width:991px) 100vw,55vw"
-              priority={i === 0}
-            />
+            {(i === 0 || prepared || i === index) && (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width:991px) calc(100vw - 48px), (max-width:1399px) 49vw, 650px"
+                loading={i === 0 ? 'eager' : 'lazy'}
+                fetchPriority={i === 0 ? 'high' : 'low'}
+                onLoad={i === 0 ? () => setPrepared(true) : undefined}
+              />
+            )}
           </div>
         ))}
         <span className="hero-image-label">Packaging & print · Representative visuals</span>

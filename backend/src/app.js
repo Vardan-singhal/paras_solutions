@@ -8,7 +8,7 @@ import { rateLimit } from 'express-rate-limit';
 import routes from './routes/index.js';
 import { errorHandler, rejectOperators } from './middleware/security.js';
 import { ApiError } from './utils/errors.js';
-export function createApp() {
+export function createApp({ initialize } = {}) {
   const app = express();
   app.disable('x-powered-by');
   app.set('trust proxy', Math.max(0, Math.min(5, Number(process.env.TRUST_PROXY_HOPS) || 0)));
@@ -34,6 +34,18 @@ export function createApp() {
   );
   app.use(express.json({ limit: '128kb' }));
   app.use(rejectOperators);
+  if (initialize) {
+    app.use(async (req, res, next) => {
+      try {
+        await initialize();
+        next();
+      } catch {
+        next(
+          new ApiError(503, 'The database is temporarily unavailable. Please try again shortly.'),
+        );
+      }
+    });
+  }
   app.get('/api/v1/health', (req, res) =>
     res.status(mongoose.connection.readyState === 1 ? 200 : 503).json({
       ok: mongoose.connection.readyState === 1,
