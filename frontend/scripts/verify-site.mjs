@@ -2,7 +2,8 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 const base = process.env.VERIFY_SITE_URL || 'http://localhost:3000';
 const api = process.env.VERIFY_API_URL || 'http://localhost:4000/api/v1';
-const catalogue = JSON.parse(await fs.readFile('../backend/data/catalog.json', 'utf8'));
+const catalogue = JSON.parse(await fs.readFile('src/data/catalog.json', 'utf8'));
+const offline = process.env.VERIFY_OFFLINE === '1';
 const pages = [
   '/',
   '/about',
@@ -26,6 +27,7 @@ const pages = [
   ...catalogue.products.map((p) => '/products/' + p.slug),
   ...catalogue.industries.map((i) => '/industries/' + i.slug),
   ...catalogue.blogs.map((a) => '/blog/' + a.slug),
+  ...catalogue.caseStudies.map((a) => '/case-studies/' + a.slug),
 ];
 const internalLinks = new Set(),
   images = new Set();
@@ -77,14 +79,16 @@ for (const route of ['/quote', '/manufacturing', '/quality', '/products/duplex-b
   assert.equal((await fetch(base + route, { redirect: 'manual' })).status, 308, route);
 for (const route of ['/robots.txt', '/sitemap.xml', '/downloads/paras-prints-company-profile.pdf'])
   assert.equal((await fetch(base + route)).status, 200, route);
-const gallery = await (await fetch(api + '/gallery?limit=100')).json();
-assert.equal(gallery.meta.total, 62);
-const settings = await (await fetch(base + '/api/v1/calculator/settings')).json();
-assert.equal(settings.data.rates, undefined);
-// The verifier does not know the backend service's private environment.
-// Both a configured key (401) and disabled private integrations (503) must deny access.
-const privateStatus = (await fetch(base + '/api/v1/quotations')).status;
-assert([401, 503].includes(privateStatus), `Private quotations exposed: ${privateStatus}`);
+if (!offline) {
+  const gallery = await (await fetch(api + '/gallery?limit=100')).json();
+  assert.equal(gallery.meta.total, catalogue.gallery.length);
+  const settings = await (await fetch(base + '/api/v1/calculator/settings')).json();
+  assert.equal(settings.data.rates, undefined);
+  // The verifier does not know the backend service's private environment.
+  // Both a configured key (401) and disabled private integrations (503) must deny access.
+  const privateStatus = (await fetch(base + '/api/v1/quotations')).status;
+  assert([401, 503].includes(privateStatus), `Private quotations exposed: ${privateStatus}`);
+}
 console.log(
-  `Verified ${pages.length} pages, ${internalLinks.size} internal links, all 62 original and optimized image URLs, downloads, metadata, redirects, missing-content routes, and the API proxy.`,
+  `Verified ${pages.length} pages, ${internalLinks.size} internal links, ${catalogue.gallery.length} original and optimized gallery image URLs, downloads, metadata, redirects, missing-content routes${offline ? ' with the backend unavailable' : ', and the API proxy'}.`,
 );

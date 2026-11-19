@@ -1992,6 +1992,10 @@ body:has(dialog[open]) {
   .container {
     --bs-gutter-x: 2.5rem;
   }
+  /* Keep wide Bootstrap rows within the narrower mobile container padding. */
+  .row.g-5 {
+    --bs-gutter-x: 2rem;
+  }
   .header-shell {
     padding-inline: 20px;
     min-height: 74px;

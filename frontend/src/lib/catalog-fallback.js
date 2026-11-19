@@ -1,86 +1,114 @@
 import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 const catalog = require('../data/catalog.json');
+const resources = {
+  products: 'products',
+  categories: 'categories',
+  industries: 'industries',
+  pages: 'pages',
+  blogs: 'blogs',
+  'case-studies': 'caseStudies',
+  clients: 'clients',
+  testimonials: 'testimonials',
+  machines: 'machines',
+  gallery: 'gallery',
+  certifications: 'certifications',
+};
+const detailResources = new Set([
+  'products',
+  'categories',
+  'industries',
+  'pages',
+  'blogs',
+  'case-studies',
+]);
+const failure = (status) => ({ ok: false, status, data: null });
 
-export function getFallbackData(pathAndQuery) {
+// Match backend public routes and listingSchema, including publication/permission rules.
+export function getFallbackData(pathAndQuery, snapshot = catalog) {
   const [pathname, queryString] = pathAndQuery.split('?');
   const params = new URLSearchParams(queryString || '');
-  const cleanPath = pathname.replace(/^\/api\/v1/, '').replace(/^\//, '');
-  const parts = cleanPath.split('/').filter(Boolean);
-
-  if (cleanPath === 'settings/public') {
-    return { ok: true, data: catalog.settings };
+  const path = pathname.replace(/^\/api\/v1(?=\/|$)/, '').replace(/^\//, '');
+  if (path === 'settings/public') return { ok: true, data: structuredClone(snapshot.settings) };
+  if (path === 'calculator/settings') {
+    const data = structuredClone(snapshot.calculator);
+    if (data) delete data.rates;
+    return { ok: true, data };
   }
-
-  if (cleanPath === 'calculator/settings') {
-    return { ok: true, data: catalog.calculator };
-  }
-
-  if (cleanPath === 'gallery/categories') {
-    const categories = Array.from(new Set((catalog.gallery || []).map((g) => g.category).filter(Boolean)));
-    return { ok: true, data: categories };
-  }
-
-  if (cleanPath === 'certifications') {
-    return { ok: true, data: [] };
-  }
-
-  const resourceType = parts[0];
-  const resourceSlug = parts[1];
-
-  let list = [];
-  if (resourceType === 'products') list = catalog.products || [];
-  else if (resourceType === 'categories') list = catalog.categories || [];
-  else if (resourceType === 'industries') list = catalog.industries || [];
-  else if (resourceType === 'pages') list = catalog.pages || [];
-  else if (resourceType === 'blogs') list = catalog.blogs || [];
-  else if (resourceType === 'case-studies') list = catalog.caseStudies || [];
-  else if (resourceType === 'clients') list = catalog.clients || [];
-  else if (resourceType === 'testimonials') list = catalog.testimonials || [];
-  else if (resourceType === 'machines') list = catalog.machines || [];
-  else if (resourceType === 'gallery') list = catalog.gallery || [];
-  else {
-    return { ok: true, data: null };
-  }
-
-  if (resourceSlug) {
-    const decodedSlug = decodeURIComponent(resourceSlug);
-    const item = list.find((i) => i.slug === decodedSlug);
-    if (!item) {
-      return { ok: false, status: 404, data: null };
+  if (path === 'gallery/categories')
+    return {
+      ok: true,
+      data: [
+        ...new Set(
+          (snapshot.gallery || [])
+            .filter((item) => item.status === 'published')
+            .map((item) => item.category)
+            .filter(Boolean),
+        ),
+      ].sort(),
+    };
+  const [resource, encodedSlug, ...rest] = path.split('/');
+  if (
+    !resources[resource] ||
+    rest.length ||
+    (encodedSlug && !detailResources.has(resource)) ||
+    (resource === 'pages' && !encodedSlug)
+  )
+    return failure(404);
+  let records = (snapshot[resources[resource]] || []).filter(
+    (item) =>
+      item.status === 'published' &&
+      (resource !== 'testimonials' || item.permissionConfirmed === true) &&
+      (resource !== 'certifications' || item.verified === true),
+  );
+  if (encodedSlug) {
+    let slug;
+    try {
+      slug = decodeURIComponent(encodedSlug);
+    } catch {
+      return failure(422);
     }
-    return { ok: true, data: item };
+    if (!/^[a-z0-9-]{1,100}$/.test(slug)) return failure(422);
+    const item = records.find((record) => record.slug === slug);
+    return item ? { ok: true, data: structuredClone(item) } : failure(404);
   }
-
-  // Filter list
-  let filtered = [...list];
-  if (params.get('featured') === 'true') {
-    filtered = filtered.filter((i) => i.primary);
-  }
-  if (params.get('category')) {
-    const cat = params.get('category');
-    filtered = filtered.filter((i) => i.categorySlug === cat || i.category === cat);
-  }
-  if (params.get('search')) {
-    const term = params.get('search').toLowerCase();
-    filtered = filtered.filter((i) =>
-      (i.name || i.title || '').toLowerCase().includes(term)
-    );
-  }
-
-  const limit = parseInt(params.get('limit') || '100', 10);
-  const page = parseInt(params.get('page') || '1', 10);
-  const total = filtered.length;
-  const paged = filtered.slice((page - 1) * limit, page * limit);
-
+  const page = Number(params.get('page') ?? 1);
+  const limit = Number(params.get('limit') ?? 24);
+  if (
+    !Number.isInteger(page) ||
+    page < 1 ||
+    page > 10000 ||
+    !Number.isInteger(limit) ||
+    limit < 1 ||
+    limit > 100 ||
+    [...params.keys()].some(
+      (key) => !['page', 'limit', 'search', 'category', 'featured'].includes(key),
+    ) ||
+    (params.get('search') || '').length > 120 ||
+    (params.get('category') || '').length > 100 ||
+    (params.get('featured') || '').length > 10
+  )
+    return failure(422);
+  const search = (params.get('search') || '').trim().toLowerCase();
+  const category = (params.get('category') || '').trim();
+  const searchField = ['products', 'industries', 'clients'].includes(resource) ? 'name' : 'title';
+  records = records.filter(
+    (item) =>
+      (!search || (item[searchField] || '').toLowerCase().includes(search)) &&
+      (!category || item[resource === 'products' ? 'categorySlug' : 'category'] === category) &&
+      (resource !== 'products' ||
+        params.get('featured')?.trim() !== 'true' ||
+        item.primary === true),
+  );
+  records.sort((a, b) =>
+    ['blogs', 'case-studies'].includes(resource)
+      ? (Date.parse(b.publishedAt) || 0) - (Date.parse(a.publishedAt) || 0)
+      : (a.order ?? 0) - (b.order ?? 0) ||
+        (Date.parse(a.createdAt) || 0) - (Date.parse(b.createdAt) || 0),
+  );
   return {
     ok: true,
-    data: paged,
-    meta: {
-      total,
-      page,
-      limit,
-      pages: Math.ceil(total / limit) || 1,
-    },
+    data: structuredClone(records.slice((page - 1) * limit, page * limit)),
+    meta: { total: records.length, page, limit, pages: Math.ceil(records.length / limit) },
   };
 }

@@ -185,3 +185,15 @@ Optional GA4 uses `NEXT_PUBLIC_GA_ID`; no analytics script loads until allowed t
 - Review legal copy, retention and provider arrangements before public launch.
 
 See [content inventory and confirmation log](documentation/content-inventory.md).
+
+## Database outage fallback
+
+Public pages use the last successful API response or a bundled public database
+snapshot when the backend is unavailable. Content and images keep the same layout.
+After database edits, run `npm run fallback:sync` from `frontend`, review the exported
+snapshot, and deploy it with its assets. For the persisted local development database,
+use `npm run fallback:sync -- --local`. No database records are changed by the export.
+
+Run `npm run test:fallback` for automated fallback checks. Set `VERIFY_OFFLINE=1`
+when running `npm run verify` against a frontend with the backend stopped.
+See [fallback behavior and refresh instructions](documentation/content-fallback.md).

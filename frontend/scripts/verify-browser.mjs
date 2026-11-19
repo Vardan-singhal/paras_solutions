@@ -77,7 +77,9 @@ try {
   await page.setViewport({ width: 390, height: 844, deviceScaleFactor: 1 });
   await page.goto(base, { waitUntil: 'networkidle2' });
   assert(
-    await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= document.documentElement.clientWidth,
+    ),
     'Mobile must not overflow horizontally.',
   );
   await page.screenshot({ path: '../output/lighthouse/screenshots/home-mobile.png' });
@@ -85,6 +87,17 @@ try {
   await page.waitForSelector('.mobile-menu[open]');
   await page.click('[aria-label="Close navigation"]');
   assert.equal(await page.$eval('.mobile-menu', (element) => element.open), false);
+
+  for (const route of ['/products', '/gallery', '/contact']) {
+    await page.goto(base + route, { waitUntil: 'networkidle2' });
+    assert(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= document.documentElement.clientWidth,
+      ),
+      `Mobile content must fit the page width: ${route}`,
+    );
+  }
+  await page.goto(base, { waitUntil: 'networkidle2' });
 
   await page.setJavaScriptEnabled(false);
   await page.reload({ waitUntil: 'networkidle2' });
