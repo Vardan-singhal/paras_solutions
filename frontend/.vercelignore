@@ -1,14 +1,9 @@
 .env
 .env.*
-**/.env
-**/.env.*
-!**/.env.example
-.local-backup/
+!.env.example
 .next/
-frontend/.next/
 node_modules/
-backend/.data/
-backend/uploads/
 tmp/
 output/
+documentation/
 .git/

@@ -1,5 +1,3 @@
-import { loadFrontendEnv } from './scripts/load-env.mjs';
-loadFrontendEnv();
 export default {
   poweredByHeader: false,
   // Resolve missing records in request-time metadata before streaming a 200 shell.
@@ -19,13 +17,6 @@ export default {
             },
           ]
         : [],
-  },
-  async rewrites() {
-    // Vercel's public route table sends /api/* directly to the backend service.
-    // Bindings are unavailable here; local/Docker development keeps its proxy.
-    if (process.env.VERCEL === '1') return [];
-    const backend = process.env.API_INTERNAL_URL || 'http://127.0.0.1:4000';
-    return [{ source: '/api/v1/:path*', destination: `${backend}/api/v1/:path*` }];
   },
   async redirects() {
     return [

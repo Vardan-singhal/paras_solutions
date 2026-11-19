@@ -1,18 +1,12 @@
-import { notFound, unstable_rethrow } from 'next/navigation';
-import { connection } from 'next/server';
+import { notFound } from 'next/navigation';
 import { cache } from 'react';
-import { backendUrl } from './backend-url.mjs';
 import { createPublicContentReader } from './public-content.mjs';
 
-const readPublicContent = createPublicContentReader({ rethrow: unstable_rethrow });
+const readPublicContent = createPublicContentReader();
 
-// Memoize only within a server render: public content stays fresh on each request.
-// AbortSignal opts out of Next's fetch memoization, so deduplicate explicitly.
+// Memoize within a server render: public content is retrieved directly from hardcoded catalog data.
 const requestApi = cache(async (path) => {
-  // Service bindings exist at request time, not while Next.js builds the site.
-  await connection();
-  const url = backendUrl(path);
-  return readPublicContent(path, url);
+  return readPublicContent(path);
 });
 export async function api(path, { missingIs404 = false } = {}) {
   const response = await requestApi(path);
