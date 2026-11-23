@@ -4,27 +4,111 @@
   "intro": "Paras Prints Solutions is proud to be the exclusive and primary packaging partner for premier electrical, electronics, lighting, transformer, and appliance manufacturers.",
   "supplyClaim": "Supplying over 35 enterprise brands continuously for 10+ consecutive fiscal years.",
   "supplyCta": "Become a Partner",
-  "count": 19,
+  "count": 26,
   "items": [
-    { "name": "Sturlite Electric Pvt. Ltd.", "sector": "Electrical & Lighting" },
-    { "name": "Adsun Lighting", "sector": "LED Consumer Goods" },
-    { "name": "Modern Transformers", "sector": "Heavy Power Equipment" },
-    { "name": "Billtech Electricals", "sector": "Switchgear & Wiring" },
-    { "name": "Cervo Electrical & Lighting", "sector": "Architectural Lights" },
-    { "name": "M.K. Electronics", "sector": "Consumer Electronics" },
-    { "name": "Fido Electricals", "sector": "Power Distribution" },
-    { "name": "Oushi Lighting Pvt. Ltd.", "sector": "Commercial Fixtures" },
-    { "name": "Glow Green Energy Ltd.", "sector": "Renewables & Solar" },
-    { "name": "Miio Energy Private Limited", "sector": "Energy Storage" },
-    { "name": "Bansal Moulders Pvt. Ltd.", "sector": "Polymer Tooling" },
-    { "name": "SMD LED & EMS Pvt. Ltd.", "sector": "Surface Mount & EMS" },
-    { "name": "S.V. Electronics", "sector": "Component Packaging" },
-    { "name": "Victor LED Lights", "sector": "Industrial Luminaires" },
-    { "name": "Vistas Electricals LLP", "sector": "Circuit Controls" },
-    { "name": "Ledure Lightings Ltd.", "sector": "Smart LED Fixtures" },
-    { "name": "Vishesh Packaging", "sector": "Allied Packaging" },
-    { "name": "Mysore Home Appliances", "sector": "White Goods & Kitchen" },
-    { "name": "LG Gain (Coimbatore)", "sector": "South Hub Logistics" },
-    { "name": "Switchify Electric Pvt. Ltd.", "sector": "Modular Switchgear" }
+    {
+      "name": "STURLITE ELECTRIC PVT. LTD.",
+      "sector": "Electrical & Lighting"
+    },
+    {
+      "name": "ALLIED LIGHTING",
+      "sector": ""
+    },
+    {
+      "name": "MODERN TRANSFORMERS PVT. LTD.",
+      "sector": "Heavy Power Equipment"
+    },
+    {
+      "name": "BILLTECH ELECTRICALS PVT. LTD.",
+      "sector": "Switchgear & Wiring"
+    },
+    {
+      "name": "M.K. ELECTRONICS",
+      "sector": "Consumer Electronics"
+    },
+    {
+      "name": "FIDO ELECTRICALS",
+      "sector": "Power Distribution"
+    },
+    {
+      "name": "OUSHI LIGHTING PVT. LTD.",
+      "sector": "Commercial Fixtures"
+    },
+    {
+      "name": "GLOW GREEN ENERGY LTD.",
+      "sector": "Renewables & Solar"
+    },
+    {
+      "name": "MIIO ENERGY PRIVATE LIMITED",
+      "sector": "Energy Storage"
+    },
+    {
+      "name": "BANSAL MOULDERS PVT. LTD.",
+      "sector": "Polymer Tooling"
+    },
+    {
+      "name": "SMD LED & EMS PVT. LTD.",
+      "sector": "Surface Mount & EMS"
+    },
+    {
+      "name": "S.V. ELECTRONICS",
+      "sector": "Component Packaging"
+    },
+    {
+      "name": "VISHESH PACKAGING",
+      "sector": "Allied Packaging"
+    },
+    {
+      "name": "LEDURE LIGHTINGS LTD.",
+      "sector": "Smart LED Fixtures"
+    },
+    {
+      "name": "MYSORE HOME APPLIANCES",
+      "sector": "White Goods & Kitchen"
+    },
+    {
+      "name": "LG GAIN (COIMBATORE)",
+      "sector": "South Hub Logistics"
+    },
+    {
+      "name": "ELTERA POWER CONTROL SYSTEMS",
+      "sector": ""
+    },
+    {
+      "name": "TANYA INDUSTRIES",
+      "sector": ""
+    },
+    {
+      "name": "APRA LED LIGHTING",
+      "sector": ""
+    },
+    {
+      "name": "SEEMA ELECTRICALS",
+      "sector": ""
+    },
+    {
+      "name": "JAI SATYA LIGHTINGS",
+      "sector": ""
+    },
+    {
+      "name": "BHAGWATI ELECTRICALS",
+      "sector": ""
+    },
+    {
+      "name": "TOSA ENERGY PVT. LTD.",
+      "sector": ""
+    },
+    {
+      "name": "SS ELECTRONICS",
+      "sector": ""
+    },
+    {
+      "name": "LUXX 99 LIGHTING PVT. LTD.",
+      "sector": ""
+    },
+    {
+      "name": "STUDIOCB",
+      "sector": ""
+    }
   ]
 }

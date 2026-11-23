@@ -1461,7 +1461,7 @@
   "caseStudies": [],
   "clients": [
     {
-      "name": "Sturlite Electric Pvt. Ltd.",
+      "name": "STURLITE ELECTRIC PVT. LTD.",
       "sector": "Electrical & Lighting",
       "slug": "client-1",
       "status": "published",
@@ -1469,15 +1469,15 @@
       "order": 0
     },
     {
-      "name": "Adsun Lighting",
-      "sector": "LED Consumer Goods",
-      "slug": "client-2",
+      "name": "ALLIED LIGHTING",
+      "sector": "",
+      "slug": "client-allied-lighting",
       "status": "published",
       "permissionConfirmed": false,
       "order": 1
     },
     {
-      "name": "Modern Transformers",
+      "name": "MODERN TRANSFORMERS PVT. LTD.",
       "sector": "Heavy Power Equipment",
       "slug": "client-3",
       "status": "published",
@@ -1485,7 +1485,7 @@
       "order": 2
     },
     {
-      "name": "Billtech Electricals",
+      "name": "BILLTECH ELECTRICALS PVT. LTD.",
       "sector": "Switchgear & Wiring",
       "slug": "client-4",
       "status": "published",
@@ -1493,132 +1493,180 @@
       "order": 3
     },
     {
-      "name": "Cervo Electrical & Lighting",
-      "sector": "Architectural Lights",
-      "slug": "client-5",
+      "name": "M.K. ELECTRONICS",
+      "sector": "Consumer Electronics",
+      "slug": "client-6",
       "status": "published",
       "permissionConfirmed": false,
       "order": 4
     },
     {
-      "name": "M.K. Electronics",
-      "sector": "Consumer Electronics",
-      "slug": "client-6",
+      "name": "FIDO ELECTRICALS",
+      "sector": "Power Distribution",
+      "slug": "client-7",
       "status": "published",
       "permissionConfirmed": false,
       "order": 5
     },
     {
-      "name": "Fido Electricals",
-      "sector": "Power Distribution",
-      "slug": "client-7",
+      "name": "OUSHI LIGHTING PVT. LTD.",
+      "sector": "Commercial Fixtures",
+      "slug": "client-8",
       "status": "published",
       "permissionConfirmed": false,
       "order": 6
     },
     {
-      "name": "Oushi Lighting Pvt. Ltd.",
-      "sector": "Commercial Fixtures",
-      "slug": "client-8",
+      "name": "GLOW GREEN ENERGY LTD.",
+      "sector": "Renewables & Solar",
+      "slug": "client-9",
       "status": "published",
       "permissionConfirmed": false,
       "order": 7
     },
     {
-      "name": "Glow Green Energy Ltd.",
-      "sector": "Renewables & Solar",
-      "slug": "client-9",
+      "name": "MIIO ENERGY PRIVATE LIMITED",
+      "sector": "Energy Storage",
+      "slug": "client-10",
       "status": "published",
       "permissionConfirmed": false,
       "order": 8
     },
     {
-      "name": "Miio Energy Private Limited",
-      "sector": "Energy Storage",
-      "slug": "client-10",
+      "name": "BANSAL MOULDERS PVT. LTD.",
+      "sector": "Polymer Tooling",
+      "slug": "client-11",
       "status": "published",
       "permissionConfirmed": false,
       "order": 9
     },
     {
-      "name": "Bansal Moulders Pvt. Ltd.",
-      "sector": "Polymer Tooling",
-      "slug": "client-11",
+      "name": "SMD LED & EMS PVT. LTD.",
+      "sector": "Surface Mount & EMS",
+      "slug": "client-12",
       "status": "published",
       "permissionConfirmed": false,
       "order": 10
     },
     {
-      "name": "SMD LED & EMS Pvt. Ltd.",
-      "sector": "Surface Mount & EMS",
-      "slug": "client-12",
+      "name": "S.V. ELECTRONICS",
+      "sector": "Component Packaging",
+      "slug": "client-13",
       "status": "published",
       "permissionConfirmed": false,
       "order": 11
     },
     {
-      "name": "S.V. Electronics",
-      "sector": "Component Packaging",
-      "slug": "client-13",
+      "name": "VISHESH PACKAGING",
+      "sector": "Allied Packaging",
+      "slug": "client-17",
       "status": "published",
       "permissionConfirmed": false,
       "order": 12
     },
     {
-      "name": "Victor LED Lights",
-      "sector": "Industrial Luminaires",
-      "slug": "client-14",
+      "name": "LEDURE LIGHTINGS LTD.",
+      "sector": "Smart LED Fixtures",
+      "slug": "client-16",
       "status": "published",
       "permissionConfirmed": false,
       "order": 13
     },
     {
-      "name": "Vistas Electricals LLP",
-      "sector": "Circuit Controls",
-      "slug": "client-15",
+      "name": "MYSORE HOME APPLIANCES",
+      "sector": "White Goods & Kitchen",
+      "slug": "client-18",
       "status": "published",
       "permissionConfirmed": false,
       "order": 14
     },
     {
-      "name": "Ledure Lightings Ltd.",
-      "sector": "Smart LED Fixtures",
-      "slug": "client-16",
+      "name": "LG GAIN (COIMBATORE)",
+      "sector": "South Hub Logistics",
+      "slug": "client-19",
       "status": "published",
       "permissionConfirmed": false,
       "order": 15
     },
     {
-      "name": "Vishesh Packaging",
-      "sector": "Allied Packaging",
-      "slug": "client-17",
+      "name": "ELTERA POWER CONTROL SYSTEMS",
+      "sector": "",
+      "slug": "client-eltera-power-control-systems",
       "status": "published",
       "permissionConfirmed": false,
       "order": 16
     },
     {
-      "name": "Mysore Home Appliances",
-      "sector": "White Goods & Kitchen",
-      "slug": "client-18",
+      "name": "TANYA INDUSTRIES",
+      "sector": "",
+      "slug": "client-tanya-industries",
       "status": "published",
       "permissionConfirmed": false,
       "order": 17
     },
     {
-      "name": "LG Gain (Coimbatore)",
-      "sector": "South Hub Logistics",
-      "slug": "client-19",
+      "name": "APRA LED LIGHTING",
+      "sector": "",
+      "slug": "client-apra-led-lighting",
       "status": "published",
       "permissionConfirmed": false,
       "order": 18
     },
     {
-      "name": "Switchify Electric Pvt. Ltd.",
-      "sector": "Modular Switchgear",
-      "slug": "client-20",
+      "name": "SEEMA ELECTRICALS",
+      "sector": "",
+      "slug": "client-seema-electricals",
       "status": "published",
       "permissionConfirmed": false,
       "order": 19
+    },
+    {
+      "name": "JAI SATYA LIGHTINGS",
+      "sector": "",
+      "slug": "client-jai-satya-lightings",
+      "status": "published",
+      "permissionConfirmed": false,
+      "order": 20
+    },
+    {
+      "name": "BHAGWATI ELECTRICALS",
+      "sector": "",
+      "slug": "client-bhagwati-electricals",
+      "status": "published",
+      "permissionConfirmed": false,
+      "order": 21
+    },
+    {
+      "name": "TOSA ENERGY PVT. LTD.",
+      "sector": "",
+      "slug": "client-tosa-energy-pvt-ltd",
+      "status": "published",
+      "permissionConfirmed": false,
+      "order": 22
+    },
+    {
+      "name": "SS ELECTRONICS",
+      "sector": "",
+      "slug": "client-ss-electronics",
+      "status": "published",
+      "permissionConfirmed": false,
+      "order": 23
+    },
+    {
+      "name": "LUXX 99 LIGHTING PVT. LTD.",
+      "sector": "",
+      "slug": "client-luxx-99-lighting-pvt-ltd",
+      "status": "published",
+      "permissionConfirmed": false,
+      "order": 24
+    },
+    {
+      "name": "STUDIOCB",
+      "sector": "",
+      "slug": "client-studiocb",
+      "status": "published",
+      "permissionConfirmed": false,
+      "order": 25
     }
   ],
   "testimonials": [

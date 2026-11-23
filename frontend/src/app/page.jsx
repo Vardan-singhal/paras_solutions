@@ -4,6 +4,7 @@ import { ArrowUpRight, Box, Layers, Printer } from 'lucide-react';
 import { content, jsonLd, siteUrl } from '@/lib/api';
 import { Button, SectionHeading, ProductGrid, FAQ, CTA, ArticleCard } from '@/components/UI';
 import HeroSlider from '@/components/HeroSlider';
+import ClientSlider from '@/components/ClientSlider';
 import Reveal from '@/components/Reveal';
 export const metadata = {
   title: 'Custom Packaging & Commercial Print Since 1996',
@@ -20,7 +21,7 @@ export default async function HomePage() {
       content('/industries'),
       content('/pages/manufacturing-process'),
       content('/machines'),
-      content('/clients?limit=8'),
+      content('/clients?limit=100'),
       content('/blogs?limit=3'),
       content('/testimonials'),
     ]);
@@ -305,14 +306,7 @@ export default async function HomePage() {
             />
           </Reveal>
           <Reveal>
-            <div className="client-grid">
-              {clients.map((c) => (
-                <div key={c.slug}>
-                  <strong>{c.name}</strong>
-                  <span>{c.sector}</span>
-                </div>
-              ))}
-            </div>
+            <ClientSlider clients={clients} />
           </Reveal>
         </div>
       </section>

@@ -1,25 +1,21 @@
 import { content, metadata } from '@/lib/api';
 import { PageHero, ContentBlocks, FAQ, CTA, SectionHeading } from '@/components/UI';
-import Gallery from '@/components/Gallery';
 import Reveal from '@/components/Reveal';
 export async function generateMetadata() {
   const p = await content('/pages/infrastructure');
   return metadata('Infrastructure & Machinery', p.lead, '/infrastructure');
 }
 export default async function Infrastructure() {
-  const [p, machines, gallery] = await Promise.all([
+  const [p, machines] = await Promise.all([
     content('/pages/infrastructure'),
     content('/machines'),
-    content('/gallery?category=Company%20profile&limit=100'),
   ]);
-  const documents = gallery.filter((g) => /page-000[89]|page-0010/.test(g.image.src));
   return (
     <>
       <PageHero {...p} crumbs={[{ label: 'Infrastructure' }]} />
       <section className="section">
         <div className="container">
           <ContentBlocks blocks={p.blocks} />
-          <Gallery items={documents} />
         </div>
       </section>
       <section className="section section--soft">

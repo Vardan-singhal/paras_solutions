@@ -901,6 +901,54 @@ body:has(dialog[open]) {
   height: 450px;
   object-fit: contain;
 }
+.client-slider {
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.client-slider__track {
+  display: flex;
+  width: max-content;
+  animation: client-scroll 40s linear infinite;
+}
+.client-slider:hover .client-slider__track,
+.client-slider:focus-within .client-slider__track {
+  animation-play-state: paused;
+}
+.client-slider__group {
+  display: flex;
+  flex-shrink: 0;
+}
+.client-slider__card {
+  width: clamp(250px, 25vw, 360px);
+  min-height: 148px;
+  padding: 30px 25px;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.client-slider__card strong {
+  font: 600 0.92rem/1.4 var(--heading);
+  letter-spacing: -0.02em;
+}
+.client-slider__card span {
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+@keyframes client-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .client-slider {
+    overflow-x: auto;
+  }
+  .client-slider__group[aria-hidden='true'] {
+    display: none;
+  }
+}
 .client-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
