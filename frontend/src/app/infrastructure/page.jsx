@@ -1,15 +1,13 @@
 import { content, metadata } from '@/lib/api';
 import { PageHero, ContentBlocks, FAQ, CTA, SectionHeading } from '@/components/UI';
 import Reveal from '@/components/Reveal';
+import machines from '@/data/infrastructure-machines.json';
 export async function generateMetadata() {
   const p = await content('/pages/infrastructure');
   return metadata('Infrastructure & Machinery', p.lead, '/infrastructure');
 }
 export default async function Infrastructure() {
-  const [p, machines] = await Promise.all([
-    content('/pages/infrastructure'),
-    content('/machines'),
-  ]);
+  const p = await content('/pages/infrastructure');
   return (
     <>
       <PageHero {...p} crumbs={[{ label: 'Infrastructure' }]} />
@@ -27,11 +25,20 @@ export default async function Infrastructure() {
           />
           <div className="row g-4">
             {machines.map((m, i) => (
-              <div className="col-md-6" key={m.slug}>
+              <div className="col-md-6" key={i}>
                 <Reveal className="detail-panel h-100">
                   <p className="eyebrow">{String(i + 1).padStart(2, '0')}</p>
                   <h3>{m.name}</h3>
-                  <p>{m.description}</p>
+                  {m.size && (
+                    <p className="mb-2">
+                      <strong>Size:</strong> {m.size}
+                    </p>
+                  )}
+                  {m.make && (
+                    <p className="mb-0">
+                      <strong>Make:</strong> {m.make}
+                    </p>
+                  )}
                 </Reveal>
               </div>
             ))}
