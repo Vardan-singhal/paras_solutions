@@ -93,7 +93,7 @@ const details = {
     ],
     specifications: [
       { label: 'Published constructions', value: '3, 5 and 7 ply' },
-      { label: 'Published flute profiles', value: 'A, B, C and E' },
+      { label: 'Published flute profiles', value: 'B and E' },
       { label: 'Dimensions', value: 'Custom dimensions confirmed during quotation' },
     ],
     industrySlugs: ['electrical-electronics', 'automotive', 'ecommerce', 'home-appliances'],
@@ -126,7 +126,7 @@ const details = {
     specifications: [
       {
         label: 'Published board range',
-        value: '250–450+ GSM; exact grade subject to confirmation',
+        value: '250–400 GSM; exact grade subject to confirmation',
       },
       { label: 'Construction', value: 'Monocartons and presentation packaging' },
       { label: 'Artwork', value: 'Quote against approved dimensions and dieline' },
@@ -157,7 +157,7 @@ const details = {
     specifications: [
       {
         label: 'Published paper range',
-        value: '120–250 GSM; exact construction confirmed by enquiry',
+        value: '250–350 GSM; exact construction confirmed by enquiry',
       },
       { label: 'Handle options', value: 'Twisted cord, rope and ribbon as published' },
       { label: 'Size', value: 'Custom dimensions subject to sample approval' },
@@ -190,7 +190,7 @@ const details = {
       'Product launch and sales literature',
     ],
     specifications: [
-      { label: 'Published paper range', value: '170–350 GSM; subject to the chosen format' },
+      { label: 'Published paper range', value: '100–400 GSM; subject to the chosen format' },
       { label: 'Formats', value: 'Multi-fold and multi-page brochures' },
       { label: 'Content planning', value: 'Provide page count, finished size and artwork' },
     ],
