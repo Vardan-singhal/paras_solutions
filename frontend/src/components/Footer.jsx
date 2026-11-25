@@ -9,7 +9,7 @@ export default function Footer({ company, products, industries }) {
           <div className="col-lg-4">
             <Link href="/" className="footer-brand">
               <Image
-                src="/assets/logo.png"
+                src="/assets/logo.webp"
                 alt="Paras Prints Solutions"
                 width={1808}
                 height={710}

@@ -108,7 +108,7 @@ function Navigation({ company, products, categories, industries, pathname }) {
         <div className="header-shell">
           <Link className="brand" href="/" aria-label="Paras Prints Solutions home">
             <Image
-              src="/assets/logo.png"
+              src="/assets/logo.webp"
               alt="Paras Prints Solutions"
               width={1808}
               height={710}

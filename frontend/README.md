@@ -9,7 +9,7 @@ The rebuild also addresses the reported layout issues: responsive grids througho
 ```text
 paras_solutions/
 ├── frontend/                 Next.js App Router, React, JavaScript
-│   ├── public/assets/        All 62 supplied images
+│   ├── public/assets/        All 94 public images in WebP format, at most 500 KB each
 │   ├── public/downloads/     Company profile PDF
 │   ├── src/app/              Public routes, metadata, errors, sitemap
 │   ├── src/components/       Navigation, gallery, forms, calculator, UI
@@ -94,7 +94,7 @@ npm run seed
 
 All product, category, industry, gallery, article, client, FAQ, page, site-setting and calculator-option content is served through the backend. Public views fetch the APIs server-side; forms and calculator actions use the same-origin `/api/v1` proxy. Draft content is excluded from public reads. See [database models](documentation/database-models.md).
 
-There are nine migrated product offerings, including the six core product pages, eight industry detail pages, three newly written planning guides and all 62 supplied assets. No client projects, prices, reviews or certificates are invented. Case studies have a complete listing/detail system and an honest empty state until approved content is available.
+There are nine migrated product offerings, including the six core product pages, eight industry detail pages, three newly written planning guides and 94 public image assets. No client projects, prices, reviews or certificates are invented. Case studies have a complete listing/detail system and an honest empty state until approved content is available.
 
 ## Calculator
 
@@ -139,6 +139,8 @@ The profile PDF can be reproduced and rendered for inspection:
 npm run assets:profile
 npm run assets:review
 ```
+
+From `frontend`, run `npm run assets:optimize` after adding public images. It converts them to WebP, keeps each file at or below 500,000 bytes, preserves pixel dimensions and transparency, updates source references, and saves originals under the ignored `.local-backup` directory. `npm run assets:check` checks the format, size limit and local image references. The PDF download remains a PDF; its build script reads the WebP profile pages.
 
 ## Production
 

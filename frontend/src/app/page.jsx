@@ -69,7 +69,7 @@ export default async function HomePage() {
               <Reveal>
                 <div className="editorial-image">
                   <Image
-                    src="/assets/paras-products-collage.jpg"
+                    src="/assets/paras-products-collage.webp"
                     alt="Representative packaging and printed product range"
                     width={1200}
                     height={896}
@@ -261,7 +261,7 @@ export default async function HomePage() {
               <Reveal>
                 <Link href="/infrastructure" className="document-preview">
                   <Image
-                    src="/assets/Company%20Profile%20Paras_page-0008.jpg"
+                    src="/assets/Company%20Profile%20Paras_page-0008.webp"
                     alt="Machinery setup page reproduced from the supplied company profile"
                     width={1241}
                     height={1754}

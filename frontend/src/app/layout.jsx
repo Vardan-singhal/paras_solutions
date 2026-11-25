@@ -11,7 +11,7 @@ const body = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap
 export const dynamic = 'force-dynamic';
 export const metadata = {
   metadataBase: new URL(siteUrl()),
-  icons: { icon: [{ url: '/assets/logo.png', type: 'image/png' }] },
+  icons: { icon: [{ url: '/assets/logo.webp', type: 'image/webp' }] },
   title: {
     default: 'Paras Prints Solutions | Packaging & Commercial Print',
     template: '%s | Paras Prints Solutions',
@@ -35,7 +35,7 @@ export default async function RootLayout({ children }) {
     '@type': 'Organization',
     name: company.name,
     url: siteUrl(),
-    logo: siteUrl() + '/assets/logo.png',
+    logo: siteUrl() + '/assets/logo.webp',
     telephone: company.phone,
     email: company.email,
   };

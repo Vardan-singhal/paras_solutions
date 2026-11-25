@@ -72,7 +72,7 @@
       ],
       "images": [
         {
-          "src": "/assets/corrugated-boxes-enterprise.jpg",
+          "src": "/assets/corrugated-boxes-enterprise.webp",
           "alt": "Heavy-duty corrugated boxes - 3, 5 and 7 ply master shippers — representative product visual",
           "width": 1200,
           "height": 896,
@@ -167,7 +167,7 @@
       ],
       "images": [
         {
-          "src": "/assets/duplex-boxes-enterprise.jpg",
+          "src": "/assets/duplex-boxes-enterprise.webp",
           "alt": "Printed duplex monocartons and rigid gift boxes with foil and UV finishes",
           "width": 1200,
           "height": 896,
@@ -260,7 +260,7 @@
       ],
       "images": [
         {
-          "src": "/assets/paper-bags-showcase.jpg",
+          "src": "/assets/paper-bags-showcase.webp",
           "alt": "Kraft and duplex paper bags with twisted cord and ribbon handles",
           "width": 1200,
           "height": 896,
@@ -352,7 +352,7 @@
       ],
       "images": [
         {
-          "src": "/assets/brochures-enterprise.jpg",
+          "src": "/assets/brochures-enterprise.webp",
           "alt": "Multi-fold corporate brochures printed on Komori 6-colour UV offset press",
           "width": 1200,
           "height": 896,
@@ -445,7 +445,7 @@
       ],
       "images": [
         {
-          "src": "/assets/catalogues-enterprise.jpg",
+          "src": "/assets/catalogues-enterprise.webp",
           "alt": "Multi-page product catalogues with perfect binding and section sewing",
           "width": 1200,
           "height": 896,
@@ -536,7 +536,7 @@
       ],
       "images": [
         {
-          "src": "/assets/leaflets-print-showcase.jpg",
+          "src": "/assets/leaflets-print-showcase.webp",
           "alt": "Pharma package inserts and promotional leaflets with accordion folding",
           "width": 1200,
           "height": 896,
@@ -615,7 +615,7 @@
       "finishingOptions": [],
       "images": [
         {
-          "src": "/assets/paras-products-collage.jpg",
+          "src": "/assets/paras-products-collage.webp",
           "alt": "Corporate writing pads and printed stationery produced by Paras Prints Solutions",
           "width": 1200,
           "height": 896,
@@ -673,7 +673,7 @@
       "finishingOptions": [],
       "images": [
         {
-          "src": "/assets/paras-products-collage.jpg",
+          "src": "/assets/paras-products-collage.webp",
           "alt": "Digital print and short-run commercial print jobs",
           "width": 1200,
           "height": 896,
@@ -731,7 +731,7 @@
       "finishingOptions": [],
       "images": [
         {
-          "src": "/assets/paras-products-collage.jpg",
+          "src": "/assets/paras-products-collage.webp",
           "alt": "Printed BOPP packaging tapes for carton sealing",
           "width": 1200,
           "height": 896,
@@ -789,7 +789,7 @@
         }
       ],
       "image": {
-        "src": "/assets/paras_print_industry/06-engineering-goods.jpg",
+        "src": "/assets/paras_print_industry/06-engineering-goods.webp",
         "alt": "Electrical & Electronics — illustrative industry visual",
         "width": 1000,
         "height": 600,
@@ -838,7 +838,7 @@
         }
       ],
       "image": {
-        "src": "/assets/paras_print_industry/08-automotive-industry.jpg",
+        "src": "/assets/paras_print_industry/08-automotive-industry.webp",
         "alt": "Automotive — illustrative industry visual",
         "width": 1000,
         "height": 600,
@@ -886,7 +886,7 @@
         }
       ],
       "image": {
-        "src": "/assets/paras_print_industry/04-pharmaceuticals.jpg",
+        "src": "/assets/paras_print_industry/04-pharmaceuticals.webp",
         "alt": "Pharmaceuticals — illustrative industry visual",
         "width": 1000,
         "height": 600,
@@ -935,7 +935,7 @@
         }
       ],
       "image": {
-        "src": "/assets/paras_print_industry/03-food-industry.jpg",
+        "src": "/assets/paras_print_industry/03-food-industry.webp",
         "alt": "Food & Beverages — illustrative industry visual",
         "width": 1000,
         "height": 600,
@@ -984,7 +984,7 @@
         }
       ],
       "image": {
-        "src": "/assets/paras-products-collage.jpg",
+        "src": "/assets/paras-products-collage.webp",
         "alt": "FMCG & Retail — illustrative industry visual",
         "width": 1200,
         "height": 896,
@@ -1033,7 +1033,7 @@
         }
       ],
       "image": {
-        "src": "/assets/paras_print_industry/11-ecommerce-industry.jpg",
+        "src": "/assets/paras_print_industry/11-ecommerce-industry.webp",
         "alt": "E-commerce — illustrative industry visual",
         "width": 1000,
         "height": 600,
@@ -1557,7 +1557,7 @@
       "excerpt": "A useful checklist for sharing dimensions, quantity, artwork and delivery requirements.",
       "faqs": [],
       "featuredImage": {
-        "src": "/assets/corrugated-boxes-enterprise.jpg",
+        "src": "/assets/corrugated-boxes-enterprise.webp",
         "alt": "Heavy-duty corrugated shipping boxes",
         "width": 1200,
         "height": 896,
@@ -1628,7 +1628,7 @@
       "excerpt": "Organise your content, page count, paper preferences and binding requirements before requesting a quote.",
       "faqs": [],
       "featuredImage": {
-        "src": "/assets/catalogues-enterprise.jpg",
+        "src": "/assets/catalogues-enterprise.webp",
         "alt": "Multi-page product catalogues",
         "width": 1200,
         "height": 896,
@@ -1699,7 +1699,7 @@
       "excerpt": "Questions to consider when briefing a mailer, shipping carton or branded product insert.",
       "faqs": [],
       "featuredImage": {
-        "src": "/assets/hero-product-showcase.jpg",
+        "src": "/assets/hero-product-showcase.webp",
         "alt": "Printed packaging showcase",
         "width": 1200,
         "height": 896,
@@ -1999,14 +1999,14 @@
       "category": "Brand",
       "createdAt": "2026-11-18T07:24:24.912Z",
       "image": {
-        "src": "/assets/logo.png",
+        "src": "/assets/logo.webp",
         "alt": "Brand logo",
         "width": 1808,
         "height": 710,
         "kind": "brand"
       },
       "order": 0,
-      "sourceFile": "/assets/logo.png",
+      "sourceFile": "/assets/logo.webp",
       "status": "published",
       "title": "Brand logo",
       "updatedAt": "2026-11-18T13:14:51.098Z"
@@ -2018,14 +2018,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.913Z",
       "image": {
-        "src": "/assets/01-textile.jpg",
+        "src": "/assets/01-textile.webp",
         "alt": "Textile and apparel packaging applications",
         "width": 600,
         "height": 400,
         "kind": "illustrative"
       },
       "order": 1,
-      "sourceFile": "/assets/01-textile.jpg",
+      "sourceFile": "/assets/01-textile.webp",
       "status": "published",
       "title": "Textile and apparel packaging applications",
       "updatedAt": "2026-11-18T13:14:51.167Z"
@@ -2037,14 +2037,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.915Z",
       "image": {
-        "src": "/assets/02-plastic.jpg",
+        "src": "/assets/02-plastic.webp",
         "alt": "Bottle and consumer product packaging applications",
         "width": 600,
         "height": 900,
         "kind": "illustrative"
       },
       "order": 2,
-      "sourceFile": "/assets/02-plastic.jpg",
+      "sourceFile": "/assets/02-plastic.webp",
       "status": "published",
       "title": "Bottle and consumer product packaging applications",
       "updatedAt": "2026-11-18T13:14:51.169Z"
@@ -2056,14 +2056,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.916Z",
       "image": {
-        "src": "/assets/11-ecommerce.jpg",
+        "src": "/assets/11-ecommerce.webp",
         "alt": "Sea freight and container logistics",
         "width": 600,
         "height": 400,
         "kind": "illustrative"
       },
       "order": 3,
-      "sourceFile": "/assets/11-ecommerce.jpg",
+      "sourceFile": "/assets/11-ecommerce.webp",
       "status": "published",
       "title": "Sea freight and container logistics",
       "updatedAt": "2026-11-18T13:14:51.171Z"
@@ -2075,14 +2075,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.917Z",
       "image": {
-        "src": "/assets/about-boxes.jpg",
+        "src": "/assets/about-boxes.webp",
         "alt": "About Paras Prints Solutions — company profile",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 4,
-      "sourceFile": "/assets/about-boxes.jpg",
+      "sourceFile": "/assets/about-boxes.webp",
       "status": "published",
       "title": "About Paras Prints Solutions — company profile",
       "updatedAt": "2026-11-18T13:14:51.172Z"
@@ -2094,14 +2094,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.918Z",
       "image": {
-        "src": "/assets/brochures-enterprise.jpg",
+        "src": "/assets/brochures-enterprise.webp",
         "alt": "Corporate brochures and folded print",
         "width": 1200,
         "height": 896,
         "kind": "illustrative"
       },
       "order": 5,
-      "sourceFile": "/assets/brochures-enterprise.jpg",
+      "sourceFile": "/assets/brochures-enterprise.webp",
       "status": "published",
       "title": "Corporate brochures and folded print",
       "updatedAt": "2026-11-18T13:14:51.174Z"
@@ -2113,14 +2113,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.918Z",
       "image": {
-        "src": "/assets/catalogues-enterprise.jpg",
+        "src": "/assets/catalogues-enterprise.webp",
         "alt": "Multi-page product catalogues",
         "width": 1200,
         "height": 896,
         "kind": "illustrative"
       },
       "order": 6,
-      "sourceFile": "/assets/catalogues-enterprise.jpg",
+      "sourceFile": "/assets/catalogues-enterprise.webp",
       "status": "published",
       "title": "Multi-page product catalogues",
       "updatedAt": "2026-11-18T13:14:51.175Z"
@@ -2132,14 +2132,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.919Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0001.jpg",
+        "src": "/assets/Company Profile Paras_page-0001.webp",
         "alt": "Company profile cover",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 7,
-      "sourceFile": "/assets/Company Profile Paras_page-0001.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0001.webp",
       "status": "published",
       "title": "Company profile cover",
       "updatedAt": "2026-11-18T13:14:51.176Z"
@@ -2151,14 +2151,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.920Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0002.jpg",
+        "src": "/assets/Company Profile Paras_page-0002.webp",
         "alt": "About us",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 8,
-      "sourceFile": "/assets/Company Profile Paras_page-0002.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0002.webp",
       "status": "published",
       "title": "About us",
       "updatedAt": "2026-11-18T13:14:51.177Z"
@@ -2170,14 +2170,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.921Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0003.jpg",
+        "src": "/assets/Company Profile Paras_page-0003.webp",
         "alt": "Our products — introduction",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 9,
-      "sourceFile": "/assets/Company Profile Paras_page-0003.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0003.webp",
       "status": "published",
       "title": "Our products — introduction",
       "updatedAt": "2026-11-18T13:14:51.178Z"
@@ -2189,14 +2189,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.923Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0004.jpg",
+        "src": "/assets/Company Profile Paras_page-0004.webp",
         "alt": "Our product portfolio",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 10,
-      "sourceFile": "/assets/Company Profile Paras_page-0004.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0004.webp",
       "status": "published",
       "title": "Our product portfolio",
       "updatedAt": "2026-11-18T13:14:51.179Z"
@@ -2208,14 +2208,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.924Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0005.jpg",
+        "src": "/assets/Company Profile Paras_page-0005.webp",
         "alt": "Our precious clients — introduction",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 11,
-      "sourceFile": "/assets/Company Profile Paras_page-0005.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0005.webp",
       "status": "published",
       "title": "Our precious clients — introduction",
       "updatedAt": "2026-11-18T13:14:51.180Z"
@@ -2227,14 +2227,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.925Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0006.jpg",
+        "src": "/assets/Company Profile Paras_page-0006.webp",
         "alt": "Our client list",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 12,
-      "sourceFile": "/assets/Company Profile Paras_page-0006.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0006.webp",
       "status": "published",
       "title": "Our client list",
       "updatedAt": "2026-11-18T13:14:51.181Z"
@@ -2246,14 +2246,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.926Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0007.jpg",
+        "src": "/assets/Company Profile Paras_page-0007.webp",
         "alt": "Machinery setup — introduction",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 13,
-      "sourceFile": "/assets/Company Profile Paras_page-0007.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0007.webp",
       "status": "published",
       "title": "Machinery setup — introduction",
       "updatedAt": "2026-11-18T13:14:51.182Z"
@@ -2265,14 +2265,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.927Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0008.jpg",
+        "src": "/assets/Company Profile Paras_page-0008.webp",
         "alt": "Machinery setup — printing and finishing",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 14,
-      "sourceFile": "/assets/Company Profile Paras_page-0008.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0008.webp",
       "status": "published",
       "title": "Machinery setup — printing and finishing",
       "updatedAt": "2026-11-18T13:14:51.184Z"
@@ -2284,14 +2284,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.928Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0009.jpg",
+        "src": "/assets/Company Profile Paras_page-0009.webp",
         "alt": "Machinery setup — production equipment",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 15,
-      "sourceFile": "/assets/Company Profile Paras_page-0009.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0009.webp",
       "status": "published",
       "title": "Machinery setup — production equipment",
       "updatedAt": "2026-11-18T13:14:51.185Z"
@@ -2303,14 +2303,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.930Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0010.jpg",
+        "src": "/assets/Company Profile Paras_page-0010.webp",
         "alt": "Machinery setup — corrugation equipment",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 16,
-      "sourceFile": "/assets/Company Profile Paras_page-0010.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0010.webp",
       "status": "published",
       "title": "Machinery setup — corrugation equipment",
       "updatedAt": "2026-11-18T13:14:51.186Z"
@@ -2322,14 +2322,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.934Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0011.jpg",
+        "src": "/assets/Company Profile Paras_page-0011.webp",
         "alt": "Lab equipment — introduction",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 17,
-      "sourceFile": "/assets/Company Profile Paras_page-0011.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0011.webp",
       "status": "published",
       "title": "Lab equipment — introduction",
       "updatedAt": "2026-11-18T13:14:51.187Z"
@@ -2341,14 +2341,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.937Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0012.jpg",
+        "src": "/assets/Company Profile Paras_page-0012.webp",
         "alt": "Laboratory testing equipment",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 18,
-      "sourceFile": "/assets/Company Profile Paras_page-0012.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0012.webp",
       "status": "published",
       "title": "Laboratory testing equipment",
       "updatedAt": "2026-11-18T13:14:51.188Z"
@@ -2360,14 +2360,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.939Z",
       "image": {
-        "src": "/assets/Company Profile Paras_page-0013.jpg",
+        "src": "/assets/Company Profile Paras_page-0013.webp",
         "alt": "Company profile — contact details",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 19,
-      "sourceFile": "/assets/Company Profile Paras_page-0013.jpg",
+      "sourceFile": "/assets/Company Profile Paras_page-0013.webp",
       "status": "published",
       "title": "Company profile — contact details",
       "updatedAt": "2026-11-18T13:14:51.190Z"
@@ -2379,14 +2379,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.941Z",
       "image": {
-        "src": "/assets/corrugated-boxes-enterprise.jpg",
+        "src": "/assets/corrugated-boxes-enterprise.webp",
         "alt": "Heavy-duty corrugated shipping boxes",
         "width": 1200,
         "height": 896,
         "kind": "illustrative"
       },
       "order": 20,
-      "sourceFile": "/assets/corrugated-boxes-enterprise.jpg",
+      "sourceFile": "/assets/corrugated-boxes-enterprise.webp",
       "status": "published",
       "title": "Heavy-duty corrugated shipping boxes",
       "updatedAt": "2026-11-18T13:14:51.192Z"
@@ -2398,14 +2398,14 @@
       "category": "Partnership artwork",
       "createdAt": "2026-11-18T07:24:24.942Z",
       "image": {
-        "src": "/assets/dealership-icon-manufacturing.jpg",
+        "src": "/assets/dealership-icon-manufacturing.webp",
         "alt": "Manufacturing capability",
         "width": 1024,
         "height": 1024,
         "kind": "illustrative"
       },
       "order": 21,
-      "sourceFile": "/assets/dealership-icon-manufacturing.jpg",
+      "sourceFile": "/assets/dealership-icon-manufacturing.webp",
       "status": "published",
       "title": "Manufacturing capability",
       "updatedAt": "2026-11-18T13:14:51.193Z"
@@ -2417,14 +2417,14 @@
       "category": "Partnership artwork",
       "createdAt": "2026-11-18T07:24:24.944Z",
       "image": {
-        "src": "/assets/dealership-icon-revenue.jpg",
+        "src": "/assets/dealership-icon-revenue.webp",
         "alt": "Business growth",
         "width": 1024,
         "height": 1024,
         "kind": "illustrative"
       },
       "order": 22,
-      "sourceFile": "/assets/dealership-icon-revenue.jpg",
+      "sourceFile": "/assets/dealership-icon-revenue.webp",
       "status": "published",
       "title": "Business growth",
       "updatedAt": "2026-11-18T13:14:51.194Z"
@@ -2436,14 +2436,14 @@
       "category": "Partnership artwork",
       "createdAt": "2026-11-18T07:24:24.945Z",
       "image": {
-        "src": "/assets/dealership-icon-support.jpg",
+        "src": "/assets/dealership-icon-support.webp",
         "alt": "Partner support",
         "width": 1024,
         "height": 1024,
         "kind": "illustrative"
       },
       "order": 23,
-      "sourceFile": "/assets/dealership-icon-support.jpg",
+      "sourceFile": "/assets/dealership-icon-support.webp",
       "status": "published",
       "title": "Partner support",
       "updatedAt": "2026-11-18T13:14:51.195Z"
@@ -2455,14 +2455,14 @@
       "category": "Partnership artwork",
       "createdAt": "2026-11-18T07:24:24.948Z",
       "image": {
-        "src": "/assets/dealership-icon-tailored.jpg",
+        "src": "/assets/dealership-icon-tailored.webp",
         "alt": "Tailored partnerships",
         "width": 1024,
         "height": 1024,
         "kind": "illustrative"
       },
       "order": 24,
-      "sourceFile": "/assets/dealership-icon-tailored.jpg",
+      "sourceFile": "/assets/dealership-icon-tailored.webp",
       "status": "published",
       "title": "Tailored partnerships",
       "updatedAt": "2026-11-18T13:14:51.197Z"
@@ -2474,14 +2474,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.954Z",
       "image": {
-        "src": "/assets/duplex-boxes-enterprise.jpg",
+        "src": "/assets/duplex-boxes-enterprise.webp",
         "alt": "Printed duplex monocartons",
         "width": 1200,
         "height": 896,
         "kind": "illustrative"
       },
       "order": 25,
-      "sourceFile": "/assets/duplex-boxes-enterprise.jpg",
+      "sourceFile": "/assets/duplex-boxes-enterprise.webp",
       "status": "published",
       "title": "Printed duplex monocartons",
       "updatedAt": "2026-11-18T13:14:51.198Z"
@@ -2493,14 +2493,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.956Z",
       "image": {
-        "src": "/assets/faq-mockup.jpg",
+        "src": "/assets/faq-mockup.webp",
         "alt": "Packaging specifications and sample planning",
         "width": 1200,
         "height": 896,
         "kind": "illustrative"
       },
       "order": 26,
-      "sourceFile": "/assets/faq-mockup.jpg",
+      "sourceFile": "/assets/faq-mockup.webp",
       "status": "published",
       "title": "Packaging specifications and sample planning",
       "updatedAt": "2026-11-18T13:14:51.199Z"
@@ -2512,14 +2512,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.957Z",
       "image": {
-        "src": "/assets/hero-brochure-cover.jpg",
+        "src": "/assets/hero-brochure-cover.webp",
         "alt": "Paras Prints Solutions — brochure cover",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 27,
-      "sourceFile": "/assets/hero-brochure-cover.jpg",
+      "sourceFile": "/assets/hero-brochure-cover.webp",
       "status": "published",
       "title": "Paras Prints Solutions — brochure cover",
       "updatedAt": "2026-11-18T13:14:51.200Z"
@@ -2531,14 +2531,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.959Z",
       "image": {
-        "src": "/assets/hero-product-showcase.jpg",
+        "src": "/assets/hero-product-showcase.webp",
         "alt": "Printed packaging showcase",
         "width": 1200,
         "height": 896,
         "kind": "illustrative"
       },
       "order": 28,
-      "sourceFile": "/assets/hero-product-showcase.jpg",
+      "sourceFile": "/assets/hero-product-showcase.webp",
       "status": "published",
       "title": "Printed packaging showcase",
       "updatedAt": "2026-11-18T13:14:51.201Z"
@@ -2550,14 +2550,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.960Z",
       "image": {
-        "src": "/assets/hero-showcase.jpg",
+        "src": "/assets/hero-showcase.webp",
         "alt": "Custom kraft and white packaging boxes",
         "width": 1376,
         "height": 768,
         "kind": "illustrative"
       },
       "order": 29,
-      "sourceFile": "/assets/hero-showcase.jpg",
+      "sourceFile": "/assets/hero-showcase.webp",
       "status": "published",
       "title": "Custom kraft and white packaging boxes",
       "updatedAt": "2026-11-18T13:14:51.203Z"
@@ -2569,14 +2569,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.961Z",
       "image": {
-        "src": "/assets/industries/01-textile.jpg",
+        "src": "/assets/industries/01-textile.webp",
         "alt": "Textile Industry — sector overview",
         "width": 1264,
         "height": 848,
         "kind": "illustrative"
       },
       "order": 30,
-      "sourceFile": "/assets/industries/01-textile.jpg",
+      "sourceFile": "/assets/industries/01-textile.webp",
       "status": "published",
       "title": "Textile Industry — sector overview",
       "updatedAt": "2026-11-18T13:14:51.204Z"
@@ -2588,14 +2588,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.962Z",
       "image": {
-        "src": "/assets/industries/02-plastic.jpg",
+        "src": "/assets/industries/02-plastic.webp",
         "alt": "Plastic Industry — sector overview",
         "width": 1264,
         "height": 848,
         "kind": "illustrative"
       },
       "order": 31,
-      "sourceFile": "/assets/industries/02-plastic.jpg",
+      "sourceFile": "/assets/industries/02-plastic.webp",
       "status": "published",
       "title": "Plastic Industry — sector overview",
       "updatedAt": "2026-11-18T13:14:51.205Z"
@@ -2607,14 +2607,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.963Z",
       "image": {
-        "src": "/assets/industries/03-food.jpg",
+        "src": "/assets/industries/03-food.webp",
         "alt": "Food Industry — sector overview",
         "width": 600,
         "height": 400,
         "kind": "illustrative"
       },
       "order": 32,
-      "sourceFile": "/assets/industries/03-food.jpg",
+      "sourceFile": "/assets/industries/03-food.webp",
       "status": "published",
       "title": "Food Industry — sector overview",
       "updatedAt": "2026-11-18T13:14:51.206Z"
@@ -2626,14 +2626,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.964Z",
       "image": {
-        "src": "/assets/industries/04-pharma.jpg",
+        "src": "/assets/industries/04-pharma.webp",
         "alt": "Pharmaceuticals — sector overview",
         "width": 600,
         "height": 420,
         "kind": "illustrative"
       },
       "order": 33,
-      "sourceFile": "/assets/industries/04-pharma.jpg",
+      "sourceFile": "/assets/industries/04-pharma.webp",
       "status": "published",
       "title": "Pharmaceuticals — sector overview",
       "updatedAt": "2026-11-18T13:14:51.207Z"
@@ -2645,14 +2645,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.965Z",
       "image": {
-        "src": "/assets/industries/05-chemicals.jpg",
+        "src": "/assets/industries/05-chemicals.webp",
         "alt": "Chemicals & Fertilizers — sector overview",
         "width": 600,
         "height": 399,
         "kind": "illustrative"
       },
       "order": 34,
-      "sourceFile": "/assets/industries/05-chemicals.jpg",
+      "sourceFile": "/assets/industries/05-chemicals.webp",
       "status": "published",
       "title": "Chemicals & Fertilizers — sector overview",
       "updatedAt": "2026-11-18T13:14:51.209Z"
@@ -2664,14 +2664,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.966Z",
       "image": {
-        "src": "/assets/industries/06-engineering.jpg",
+        "src": "/assets/industries/06-engineering.webp",
         "alt": "Engineering Goods — sector overview",
         "width": 600,
         "height": 400,
         "kind": "illustrative"
       },
       "order": 35,
-      "sourceFile": "/assets/industries/06-engineering.jpg",
+      "sourceFile": "/assets/industries/06-engineering.webp",
       "status": "published",
       "title": "Engineering Goods — sector overview",
       "updatedAt": "2026-11-18T13:14:51.210Z"
@@ -2683,14 +2683,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.967Z",
       "image": {
-        "src": "/assets/industries/07-oil-petro.jpg",
+        "src": "/assets/industries/07-oil-petro.webp",
         "alt": "Oils & Petro — sector overview",
         "width": 600,
         "height": 900,
         "kind": "illustrative"
       },
       "order": 36,
-      "sourceFile": "/assets/industries/07-oil-petro.jpg",
+      "sourceFile": "/assets/industries/07-oil-petro.webp",
       "status": "published",
       "title": "Oils & Petro — sector overview",
       "updatedAt": "2026-11-18T13:14:51.211Z"
@@ -2702,14 +2702,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.968Z",
       "image": {
-        "src": "/assets/industries/08-automotive.jpg",
+        "src": "/assets/industries/08-automotive.webp",
         "alt": "Automotive Industry — sector overview",
         "width": 600,
         "height": 338,
         "kind": "illustrative"
       },
       "order": 37,
-      "sourceFile": "/assets/industries/08-automotive.jpg",
+      "sourceFile": "/assets/industries/08-automotive.webp",
       "status": "published",
       "title": "Automotive Industry — sector overview",
       "updatedAt": "2026-11-18T13:14:51.212Z"
@@ -2721,14 +2721,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.969Z",
       "image": {
-        "src": "/assets/industries/09-appliances.jpg",
+        "src": "/assets/industries/09-appliances.webp",
         "alt": "Home Appliance — sector overview",
         "width": 600,
         "height": 400,
         "kind": "illustrative"
       },
       "order": 38,
-      "sourceFile": "/assets/industries/09-appliances.jpg",
+      "sourceFile": "/assets/industries/09-appliances.webp",
       "status": "published",
       "title": "Home Appliance — sector overview",
       "updatedAt": "2026-11-18T13:14:51.213Z"
@@ -2740,14 +2740,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.970Z",
       "image": {
-        "src": "/assets/industries/10-air-cargo.jpg",
+        "src": "/assets/industries/10-air-cargo.webp",
         "alt": "Air Cargo & Logistics — sector overview",
         "width": 600,
         "height": 400,
         "kind": "illustrative"
       },
       "order": 39,
-      "sourceFile": "/assets/industries/10-air-cargo.jpg",
+      "sourceFile": "/assets/industries/10-air-cargo.webp",
       "status": "published",
       "title": "Air Cargo & Logistics — sector overview",
       "updatedAt": "2026-11-18T13:14:51.214Z"
@@ -2759,14 +2759,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.971Z",
       "image": {
-        "src": "/assets/industries/11-ecommerce.jpg",
+        "src": "/assets/industries/11-ecommerce.webp",
         "alt": "E-Commerce Industry — sector overview",
         "width": 1264,
         "height": 848,
         "kind": "illustrative"
       },
       "order": 40,
-      "sourceFile": "/assets/industries/11-ecommerce.jpg",
+      "sourceFile": "/assets/industries/11-ecommerce.webp",
       "status": "published",
       "title": "E-Commerce Industry — sector overview",
       "updatedAt": "2026-11-18T13:14:51.215Z"
@@ -2778,14 +2778,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.972Z",
       "image": {
-        "src": "/assets/industries/12-manufacturing.jpg",
+        "src": "/assets/industries/12-manufacturing.webp",
         "alt": "Manufacturing — sector overview",
         "width": 600,
         "height": 400,
         "kind": "illustrative"
       },
       "order": 41,
-      "sourceFile": "/assets/industries/12-manufacturing.jpg",
+      "sourceFile": "/assets/industries/12-manufacturing.webp",
       "status": "published",
       "title": "Manufacturing — sector overview",
       "updatedAt": "2026-11-18T13:14:51.218Z"
@@ -2797,14 +2797,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.973Z",
       "image": {
-        "src": "/assets/leaflets-print-showcase.jpg",
+        "src": "/assets/leaflets-print-showcase.webp",
         "alt": "Promotional leaflets and printed inserts",
         "width": 1200,
         "height": 896,
         "kind": "illustrative"
       },
       "order": 42,
-      "sourceFile": "/assets/leaflets-print-showcase.jpg",
+      "sourceFile": "/assets/leaflets-print-showcase.webp",
       "status": "published",
       "title": "Promotional leaflets and printed inserts",
       "updatedAt": "2026-11-18T13:14:51.219Z"
@@ -2816,14 +2816,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.975Z",
       "image": {
-        "src": "/assets/packaging-products-group.jpg",
+        "src": "/assets/packaging-products-group.webp",
         "alt": "Packaging, paper bags and commercial print",
         "width": 512,
         "height": 345,
         "kind": "illustrative"
       },
       "order": 43,
-      "sourceFile": "/assets/packaging-products-group.jpg",
+      "sourceFile": "/assets/packaging-products-group.webp",
       "status": "published",
       "title": "Packaging, paper bags and commercial print",
       "updatedAt": "2026-11-18T13:14:51.220Z"
@@ -2835,14 +2835,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.976Z",
       "image": {
-        "src": "/assets/paper-bags-showcase.jpg",
+        "src": "/assets/paper-bags-showcase.webp",
         "alt": "Kraft and duplex paper bags",
         "width": 1200,
         "height": 896,
         "kind": "illustrative"
       },
       "order": 44,
-      "sourceFile": "/assets/paper-bags-showcase.jpg",
+      "sourceFile": "/assets/paper-bags-showcase.webp",
       "status": "published",
       "title": "Kraft and duplex paper bags",
       "updatedAt": "2026-11-18T13:14:51.221Z"
@@ -2854,14 +2854,14 @@
       "category": "Illustrative facility visuals",
       "createdAt": "2026-11-18T07:24:24.976Z",
       "image": {
-        "src": "/assets/paras-plant-facility.jpg",
+        "src": "/assets/paras-plant-facility.webp",
         "alt": "Integrated printing and packaging facility",
         "width": 1200,
         "height": 896,
         "kind": "illustrative"
       },
       "order": 45,
-      "sourceFile": "/assets/paras-plant-facility.jpg",
+      "sourceFile": "/assets/paras-plant-facility.webp",
       "status": "published",
       "title": "Integrated printing and packaging facility",
       "updatedAt": "2026-11-18T13:14:51.222Z"
@@ -2873,14 +2873,14 @@
       "category": "Product visuals",
       "createdAt": "2026-11-18T07:24:24.977Z",
       "image": {
-        "src": "/assets/paras-products-collage.jpg",
+        "src": "/assets/paras-products-collage.webp",
         "alt": "Packaging and commercial print range",
         "width": 1200,
         "height": 896,
         "kind": "illustrative"
       },
       "order": 46,
-      "sourceFile": "/assets/paras-products-collage.jpg",
+      "sourceFile": "/assets/paras-products-collage.webp",
       "status": "published",
       "title": "Packaging and commercial print range",
       "updatedAt": "2026-11-18T13:14:51.223Z"
@@ -2892,14 +2892,14 @@
       "category": "Partnership artwork",
       "createdAt": "2026-11-18T07:24:24.978Z",
       "image": {
-        "src": "/assets/partner-engineer.jpg",
+        "src": "/assets/partner-engineer.webp",
         "alt": "Packaging consultation representative",
         "width": 896,
         "height": 1200,
         "kind": "illustrative"
       },
       "order": 47,
-      "sourceFile": "/assets/partner-engineer.jpg",
+      "sourceFile": "/assets/partner-engineer.webp",
       "status": "published",
       "title": "Packaging consultation representative",
       "updatedAt": "2026-11-18T13:14:51.224Z"
@@ -2911,14 +2911,14 @@
       "category": "Illustrative facility visuals",
       "createdAt": "2026-11-18T07:24:24.979Z",
       "image": {
-        "src": "/assets/precision-flute-stacks.jpg",
+        "src": "/assets/precision-flute-stacks.webp",
         "alt": "Precision corrugated flute stacks",
         "width": 1024,
         "height": 1024,
         "kind": "illustrative"
       },
       "order": 48,
-      "sourceFile": "/assets/precision-flute-stacks.jpg",
+      "sourceFile": "/assets/precision-flute-stacks.webp",
       "status": "published",
       "title": "Precision corrugated flute stacks",
       "updatedAt": "2026-11-18T13:14:51.225Z"
@@ -2930,14 +2930,14 @@
       "category": "Company profile",
       "createdAt": "2026-11-18T07:24:24.980Z",
       "image": {
-        "src": "/assets/products-showcase.jpg",
+        "src": "/assets/products-showcase.webp",
         "alt": "Company product portfolio",
         "width": 1241,
         "height": 1754,
         "kind": "document"
       },
       "order": 49,
-      "sourceFile": "/assets/products-showcase.jpg",
+      "sourceFile": "/assets/products-showcase.webp",
       "status": "published",
       "title": "Company product portfolio",
       "updatedAt": "2026-11-18T13:14:51.226Z"
@@ -2949,14 +2949,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.981Z",
       "image": {
-        "src": "/assets/paras_print_industry/01-textile-industry.jpg",
+        "src": "/assets/paras_print_industry/01-textile-industry.webp",
         "alt": "Textile Industry — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 50,
-      "sourceFile": "/assets/paras_print_industry/01-textile-industry.jpg",
+      "sourceFile": "/assets/paras_print_industry/01-textile-industry.webp",
       "status": "published",
       "title": "Textile Industry — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.227Z"
@@ -2968,14 +2968,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.982Z",
       "image": {
-        "src": "/assets/paras_print_industry/02-plastic-industry.jpg",
+        "src": "/assets/paras_print_industry/02-plastic-industry.webp",
         "alt": "Plastic Industry — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 51,
-      "sourceFile": "/assets/paras_print_industry/02-plastic-industry.jpg",
+      "sourceFile": "/assets/paras_print_industry/02-plastic-industry.webp",
       "status": "published",
       "title": "Plastic Industry — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.228Z"
@@ -2987,14 +2987,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.983Z",
       "image": {
-        "src": "/assets/paras_print_industry/03-food-industry.jpg",
+        "src": "/assets/paras_print_industry/03-food-industry.webp",
         "alt": "Food Industry — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 52,
-      "sourceFile": "/assets/paras_print_industry/03-food-industry.jpg",
+      "sourceFile": "/assets/paras_print_industry/03-food-industry.webp",
       "status": "published",
       "title": "Food Industry — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.230Z"
@@ -3006,14 +3006,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.985Z",
       "image": {
-        "src": "/assets/paras_print_industry/04-pharmaceuticals.jpg",
+        "src": "/assets/paras_print_industry/04-pharmaceuticals.webp",
         "alt": "Pharmaceuticals — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 53,
-      "sourceFile": "/assets/paras_print_industry/04-pharmaceuticals.jpg",
+      "sourceFile": "/assets/paras_print_industry/04-pharmaceuticals.webp",
       "status": "published",
       "title": "Pharmaceuticals — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.231Z"
@@ -3025,14 +3025,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.986Z",
       "image": {
-        "src": "/assets/paras_print_industry/05-chemicals-fertilizers.jpg",
+        "src": "/assets/paras_print_industry/05-chemicals-fertilizers.webp",
         "alt": "Chemicals & Fertilizers — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 54,
-      "sourceFile": "/assets/paras_print_industry/05-chemicals-fertilizers.jpg",
+      "sourceFile": "/assets/paras_print_industry/05-chemicals-fertilizers.webp",
       "status": "published",
       "title": "Chemicals & Fertilizers — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.232Z"
@@ -3044,14 +3044,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.987Z",
       "image": {
-        "src": "/assets/paras_print_industry/06-engineering-goods.jpg",
+        "src": "/assets/paras_print_industry/06-engineering-goods.webp",
         "alt": "Engineering Goods — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 55,
-      "sourceFile": "/assets/paras_print_industry/06-engineering-goods.jpg",
+      "sourceFile": "/assets/paras_print_industry/06-engineering-goods.webp",
       "status": "published",
       "title": "Engineering Goods — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.233Z"
@@ -3063,14 +3063,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.988Z",
       "image": {
-        "src": "/assets/paras_print_industry/07-oils-petro.jpg",
+        "src": "/assets/paras_print_industry/07-oils-petro.webp",
         "alt": "Oils & Petro — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 56,
-      "sourceFile": "/assets/paras_print_industry/07-oils-petro.jpg",
+      "sourceFile": "/assets/paras_print_industry/07-oils-petro.webp",
       "status": "published",
       "title": "Oils & Petro — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.235Z"
@@ -3082,14 +3082,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.989Z",
       "image": {
-        "src": "/assets/paras_print_industry/08-automotive-industry.jpg",
+        "src": "/assets/paras_print_industry/08-automotive-industry.webp",
         "alt": "Automotive Industry — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 57,
-      "sourceFile": "/assets/paras_print_industry/08-automotive-industry.jpg",
+      "sourceFile": "/assets/paras_print_industry/08-automotive-industry.webp",
       "status": "published",
       "title": "Automotive Industry — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.236Z"
@@ -3101,14 +3101,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.990Z",
       "image": {
-        "src": "/assets/paras_print_industry/09-home-appliance.jpg",
+        "src": "/assets/paras_print_industry/09-home-appliance.webp",
         "alt": "Home Appliance — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 58,
-      "sourceFile": "/assets/paras_print_industry/09-home-appliance.jpg",
+      "sourceFile": "/assets/paras_print_industry/09-home-appliance.webp",
       "status": "published",
       "title": "Home Appliance — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.237Z"
@@ -3120,14 +3120,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.990Z",
       "image": {
-        "src": "/assets/paras_print_industry/10-air-cargo-logistics.jpg",
+        "src": "/assets/paras_print_industry/10-air-cargo-logistics.webp",
         "alt": "Air Cargo & Logistics — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 59,
-      "sourceFile": "/assets/paras_print_industry/10-air-cargo-logistics.jpg",
+      "sourceFile": "/assets/paras_print_industry/10-air-cargo-logistics.webp",
       "status": "published",
       "title": "Air Cargo & Logistics — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.238Z"
@@ -3139,14 +3139,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.991Z",
       "image": {
-        "src": "/assets/paras_print_industry/11-ecommerce-industry.jpg",
+        "src": "/assets/paras_print_industry/11-ecommerce-industry.webp",
         "alt": "E-Commerce Industry — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 60,
-      "sourceFile": "/assets/paras_print_industry/11-ecommerce-industry.jpg",
+      "sourceFile": "/assets/paras_print_industry/11-ecommerce-industry.webp",
       "status": "published",
       "title": "E-Commerce Industry — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.239Z"
@@ -3158,14 +3158,14 @@
       "category": "Industry visuals",
       "createdAt": "2026-11-18T07:24:24.992Z",
       "image": {
-        "src": "/assets/paras_print_industry/12-manufacturing.jpg",
+        "src": "/assets/paras_print_industry/12-manufacturing.webp",
         "alt": "Manufacturing — packaging applications",
         "width": 1000,
         "height": 600,
         "kind": "illustrative"
       },
       "order": 61,
-      "sourceFile": "/assets/paras_print_industry/12-manufacturing.jpg",
+      "sourceFile": "/assets/paras_print_industry/12-manufacturing.webp",
       "status": "published",
       "title": "Manufacturing — packaging applications",
       "updatedAt": "2026-11-18T13:14:51.240Z"

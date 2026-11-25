@@ -52,7 +52,7 @@ export default async function About() {
               <Reveal>
                 <Image
                   className="rounded-media"
-                  src="/assets/paras-products-collage.jpg"
+                  src="/assets/paras-products-collage.webp"
                   alt="Representative packaging and print range"
                   width={1200}
                   height={896}

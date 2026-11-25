@@ -11,11 +11,11 @@ const image = (src, alt) => {
     height: a?.height || 896,
     kind:
       src.includes('Company Profile') ||
-      ['about-boxes.jpg', 'products-showcase.jpg', 'hero-brochure-cover.jpg'].some((s) =>
+      ['about-boxes.webp', 'products-showcase.webp', 'hero-brochure-cover.webp'].some((s) =>
         src.endsWith(s),
       )
         ? 'document'
-        : src.endsWith('logo.png')
+        : src.endsWith('logo.webp')
           ? 'brand'
           : 'illustrative',
   };
@@ -335,7 +335,7 @@ const industries = [
       'Confirm any product-specific labelling or compliance requirements separately.',
     ],
     ['corrugated-boxes', 'duplex-boxes', 'leaflets'],
-    '/assets/paras_print_industry/06-engineering-goods.jpg',
+    '/assets/paras_print_industry/06-engineering-goods.webp',
   ],
   [
     'automotive',
@@ -353,7 +353,7 @@ const industries = [
       'Agree the final sample and testing requirements before ordering.',
     ],
     ['corrugated-boxes', 'catalogues'],
-    '/assets/paras_print_industry/08-automotive-industry.jpg',
+    '/assets/paras_print_industry/08-automotive-industry.webp',
   ],
   [
     'pharmaceuticals',
@@ -371,7 +371,7 @@ const industries = [
       'No pharmaceutical certification or regulatory compliance is asserted by this website.',
     ],
     ['duplex-boxes', 'leaflets', 'corrugated-boxes'],
-    '/assets/paras_print_industry/04-pharmaceuticals.jpg',
+    '/assets/paras_print_industry/04-pharmaceuticals.webp',
   ],
   [
     'food-beverages',
@@ -389,7 +389,7 @@ const industries = [
       'Confirm material, artwork and delivery requirements in writing.',
     ],
     ['corrugated-boxes', 'duplex-boxes', 'paper-bags'],
-    '/assets/paras_print_industry/03-food-industry.jpg',
+    '/assets/paras_print_industry/03-food-industry.webp',
   ],
   [
     'fmcg',
@@ -407,7 +407,7 @@ const industries = [
       'Do not infer a material claim from a representative product image.',
     ],
     ['duplex-boxes', 'paper-bags', 'brochures'],
-    '/assets/paras-products-collage.jpg',
+    '/assets/paras-products-collage.webp',
   ],
   [
     'engineering',
@@ -425,7 +425,7 @@ const industries = [
       'Agree load and transport checks for the actual pack.',
     ],
     ['corrugated-boxes', 'catalogues', 'brochures'],
-    '/assets/paras_print_industry/06-engineering-goods.jpg',
+    '/assets/paras_print_industry/06-engineering-goods.webp',
   ],
   [
     'ecommerce',
@@ -443,7 +443,7 @@ const industries = [
       'A packaging choice does not by itself guarantee freedom from transit damage.',
     ],
     ['corrugated-boxes', 'duplex-boxes', 'leaflets'],
-    '/assets/paras_print_industry/11-ecommerce-industry.jpg',
+    '/assets/paras_print_industry/11-ecommerce-industry.webp',
   ],
   [
     'home-appliances',
@@ -461,7 +461,7 @@ const industries = [
       'Published capacity and tolerance figures remain subject to company verification.',
     ],
     ['corrugated-boxes', 'catalogues', 'leaflets'],
-    '/assets/paras_print_industry/09-home-appliance.jpg',
+    '/assets/paras_print_industry/09-home-appliance.webp',
   ],
 ].map(
   (
@@ -690,7 +690,7 @@ const blogData = [
     'How to prepare a packaging quotation brief',
     'A useful checklist for sharing dimensions, quantity, artwork and delivery requirements.',
     'Packaging briefs',
-    '/assets/corrugated-boxes-enterprise.jpg',
+    '/assets/corrugated-boxes-enterprise.webp',
     [
       [
         'Start with the packed product',
@@ -715,7 +715,7 @@ const blogData = [
     'Brochure or catalogue? Plan the print brief first.',
     'Organise your content, page count, paper preferences and binding requirements before requesting a quote.',
     'Commercial print',
-    '/assets/catalogues-enterprise.jpg',
+    '/assets/catalogues-enterprise.webp',
     [
       [
         'Give the document a job',
@@ -740,7 +740,7 @@ const blogData = [
     'Plan an e-commerce pack around the whole journey.',
     'Questions to consider when briefing a mailer, shipping carton or branded product insert.',
     'Packaging briefs',
-    '/assets/hero-product-showcase.jpg',
+    '/assets/hero-product-showcase.webp',
     [
       [
         'Consider the packing sequence',
@@ -810,9 +810,9 @@ const settings = {
   },
   home: {
     slides: [
-      image('/assets/hero-product-showcase.jpg', 'Representative printed packaging'),
-      image('/assets/hero-showcase.jpg', 'Representative custom kraft and white cartons'),
-      image('/assets/packaging-products-group.jpg', 'Representative packaging and print range'),
+      image('/assets/hero-product-showcase.webp', 'Representative printed packaging'),
+      image('/assets/hero-showcase.webp', 'Representative custom kraft and white cartons'),
+      image('/assets/packaging-products-group.webp', 'Representative packaging and print range'),
     ],
     highlights: [
       { title: 'Since 1996', text: 'A published history in packaging and print' },

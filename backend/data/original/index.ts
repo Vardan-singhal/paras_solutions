@@ -88,17 +88,17 @@ export const calculator = {
 };
 
 export const gallery = [
-  { src: "/assets/hero-product-showcase.jpg", caption: "Printed packaging showcase - offset and corrugation output", group: "Products" },
-  { src: "/assets/precision-flute-stacks.jpg", caption: "Precision flute stacks - virgin kraft and duplex finish", group: "Manufacturing" },
-  { src: "/assets/paras-plant-facility.jpg", caption: "Integrated manufacturing facility, Ghaziabad", group: "Facility" },
-  { src: "/assets/paras-products-collage.jpg", caption: "Product range - packaging and commercial print", group: "Products" },
-  { src: "/assets/corrugated-boxes-enterprise.jpg", caption: "Heavy-duty corrugated boxes (3, 5 and 7-ply)", group: "Products" },
-  { src: "/assets/duplex-boxes-enterprise.jpg", caption: "Duplex monocartons, foil and UV finishes", group: "Products" },
-  { src: "/assets/paper-bags-showcase.jpg", caption: "Kraft and duplex paper bags", group: "Products" },
-  { src: "/assets/brochures-enterprise.jpg", caption: "Multi-fold brochures on 6-colour UV offset", group: "Commercial print" },
-  { src: "/assets/catalogues-enterprise.jpg", caption: "Multi-page catalogues, perfect bound and section sewn", group: "Commercial print" },
-  { src: "/assets/leaflets-print-showcase.jpg", caption: "Pharma inserts and promotional leaflets", group: "Commercial print" },
-  { src: "/assets/hero-showcase.jpg", caption: "Custom kraft and white packaging boxes", group: "Products" },
+  { src: "/assets/hero-product-showcase.webp", caption: "Printed packaging showcase - offset and corrugation output", group: "Products" },
+  { src: "/assets/precision-flute-stacks.webp", caption: "Precision flute stacks - virgin kraft and duplex finish", group: "Manufacturing" },
+  { src: "/assets/paras-plant-facility.webp", caption: "Integrated manufacturing facility, Ghaziabad", group: "Facility" },
+  { src: "/assets/paras-products-collage.webp", caption: "Product range - packaging and commercial print", group: "Products" },
+  { src: "/assets/corrugated-boxes-enterprise.webp", caption: "Heavy-duty corrugated boxes (3, 5 and 7-ply)", group: "Products" },
+  { src: "/assets/duplex-boxes-enterprise.webp", caption: "Duplex monocartons, foil and UV finishes", group: "Products" },
+  { src: "/assets/paper-bags-showcase.webp", caption: "Kraft and duplex paper bags", group: "Products" },
+  { src: "/assets/brochures-enterprise.webp", caption: "Multi-fold brochures on 6-colour UV offset", group: "Commercial print" },
+  { src: "/assets/catalogues-enterprise.webp", caption: "Multi-page catalogues, perfect bound and section sewn", group: "Commercial print" },
+  { src: "/assets/leaflets-print-showcase.webp", caption: "Pharma inserts and promotional leaflets", group: "Commercial print" },
+  { src: "/assets/hero-showcase.webp", caption: "Custom kraft and white packaging boxes", group: "Products" },
 ].map((item) => {
   const asset = assetInventory.items.find((asset) => asset.path === item.src);
   return { ...item, width: asset?.width, height: asset?.height };
