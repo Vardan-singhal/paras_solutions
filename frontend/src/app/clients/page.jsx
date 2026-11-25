@@ -1,5 +1,6 @@
 import { content } from '@/lib/api';
 import { PageHero, CTA } from '@/components/UI';
+import ClientIdentity from '@/components/ClientIdentity';
 export const metadata = {
   title: 'Clients & Industry Relationships',
   description:
@@ -21,7 +22,7 @@ export default async function Clients() {
           <div className="client-grid">
             {clients.map((c) => (
               <div key={c.slug}>
-                <strong>{c.name}</strong>
+                <ClientIdentity name={c.name} />
                 <span>{c.sector}</span>
               </div>
             ))}

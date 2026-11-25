@@ -1,3 +1,5 @@
+import ClientIdentity from './ClientIdentity';
+
 export default function ClientSlider({ clients }) {
   if (!clients.length) return null;
 
@@ -12,7 +14,7 @@ export default function ClientSlider({ clients }) {
           >
             {clients.map((client) => (
               <div className="client-slider__card" key={client.slug}>
-                <strong>{client.name}</strong>
+                <ClientIdentity name={client.name} />
                 <span>{client.sector}</span>
               </div>
             ))}

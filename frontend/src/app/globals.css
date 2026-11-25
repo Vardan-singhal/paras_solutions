@@ -901,6 +901,21 @@ body:has(dialog[open]) {
   height: 450px;
   object-fit: contain;
 }
+.client-logo {
+  position: relative;
+  display: block;
+  width: 220px;
+  max-width: 100%;
+  height: 56px;
+  flex-shrink: 0;
+}
+.client-logo img {
+  object-fit: contain;
+  object-position: left center;
+}
+.client-grid .client-logo {
+  height: 44px;
+}
 .client-slider {
   overflow: hidden;
   border: 1px solid var(--line);
