@@ -911,7 +911,7 @@ body:has(dialog[open]) {
 }
 .client-logo img {
   object-fit: contain;
-  object-position: left center;
+  object-position: center;
 }
 .client-grid .client-logo {
   height: 44px;
@@ -941,6 +941,8 @@ body:has(dialog[open]) {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   gap: 8px;
 }
 .client-slider__card strong {
@@ -978,6 +980,8 @@ body:has(dialog[open]) {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
   gap: 8px;
 }
 .client-grid strong {
