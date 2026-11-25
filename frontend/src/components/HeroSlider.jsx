@@ -57,15 +57,17 @@ export default function HeroSlider({ slides }) {
             aria-label={`${i + 1} of ${slides.length}`}
           >
             {(i === 0 || prepared || i === index) && (
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                sizes="100vw"
-                loading={i === 0 || i === index ? 'eager' : 'lazy'}
-                fetchPriority={i === 0 ? 'high' : 'low'}
-                onLoad={i === 0 ? () => setPrepared(true) : undefined}
-              />
+              <div className="hero-slide__image">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="100vw"
+                  loading={i === 0 || i === index ? 'eager' : 'lazy'}
+                  fetchPriority={i === 0 ? 'high' : 'low'}
+                  onLoad={i === 0 ? () => setPrepared(true) : undefined}
+                />
+              </div>
             )}
           </div>
         ))}

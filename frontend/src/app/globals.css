@@ -546,7 +546,7 @@ body:has(dialog[open]) {
 .search-results p {
   margin: 0;
 }
-/* Full-width hero: every slide shares one fixed aspect ratio. */
+/* Full-width banners retain their proportions with a shared top crop. */
 .home-hero {
   background: var(--soft);
   padding: 0;
@@ -556,11 +556,13 @@ body:has(dialog[open]) {
   width: 100%;
   min-width: 0;
   isolation: isolate;
+  container-type: inline-size;
 }
 .hero-slider__stage {
+  --hero-top-crop: min(80px, 4.32cqw);
   position: relative;
   height: min(
-    calc(100vw / 2.75 + 118px),
+    calc(100cqw * 849 / 1851 - var(--hero-top-crop)),
     calc(100svh - var(--hero-header-height, calc(var(--header-height) + 40px)))
   );
   background: #e7e3dc;
@@ -576,9 +578,16 @@ body:has(dialog[open]) {
 .hero-slide.is-active {
   opacity: 1;
 }
+.hero-slide__image {
+  position: absolute;
+  top: calc(0px - var(--hero-top-crop));
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1851 / 849;
+}
 .hero-slide img {
-  object-fit: fill;
-  object-position: center;
+  object-fit: cover;
+  object-position: center top;
 }
 .hero-slider__arrow {
   position: absolute;
@@ -607,11 +616,11 @@ body:has(dialog[open]) {
   background: #fff;
 }
 .slider-controls {
+  display: none;
   position: absolute;
   bottom: clamp(8px, 1.6vw, 26px);
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
   justify-content: center;
   align-items: center;
   gap: 14px;
