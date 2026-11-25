@@ -33,6 +33,7 @@ export default async function Product({ params }) {
         eyebrow={p.categoryName}
         title={p.name}
         lead={p.summary}
+        banner={p.banner}
         crumbs={[{ label: 'Products', href: '/products' }, { label: p.name }]}
       />
       <section className="section">
@@ -46,8 +47,6 @@ export default async function Product({ params }) {
                     alt={p.images[0].alt}
                     width={p.images[0].width}
                     height={p.images[0].height}
-                    loading="eager"
-                    fetchPriority="high"
                     sizes="(max-width:991px) 100vw,50vw"
                   />
                 </div>

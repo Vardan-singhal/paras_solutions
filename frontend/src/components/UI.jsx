@@ -41,7 +41,7 @@ export function SectionHeading({
     </div>
   );
 }
-export function PageHero({ eyebrow, title, lead, crumbs = [], children }) {
+export function PageHero({ eyebrow, title, lead, crumbs = [], banner, children }) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -56,7 +56,18 @@ export function PageHero({ eyebrow, title, lead, crumbs = [], children }) {
     ],
   };
   return (
-    <section className="page-hero">
+    <section className={`page-hero${banner ? ' page-hero--banner' : ''}`}>
+      {banner && (
+        <Image
+          className="page-hero__banner"
+          src={banner.src}
+          alt={banner.alt}
+          fill
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+        />
+      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(schema) }} />
       <div className="container">
         <nav aria-label="Breadcrumb">

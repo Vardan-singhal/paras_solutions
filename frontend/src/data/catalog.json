@@ -90,6 +90,12 @@
         "Corrugated board — 3, 5 and 7 ply as listed"
       ],
       "name": "Corrugated Boxes",
+      "banner": {
+        "src": "/assets/Products%20Banner/Corrugated-Box.webp",
+        "alt": "Corrugated Boxes by Paras Prints Solutions",
+        "width": 1850,
+        "height": 850
+      },
       "order": 0,
       "primary": true,
       "printingOptions": [
@@ -178,6 +184,12 @@
         "White-back duplex board"
       ],
       "name": "Duplex Boxes",
+      "banner": {
+        "src": "/assets/Products%20Banner/Duplex-Box.webp",
+        "alt": "Duplex Boxes by Paras Prints Solutions",
+        "width": 1851,
+        "height": 850
+      },
       "order": 1,
       "primary": true,
       "printingOptions": [
@@ -264,6 +276,12 @@
         "Laminated duplex paper"
       ],
       "name": "Paper Bags",
+      "banner": {
+        "src": "/assets/Products%20Banner/Paper-Bag.webp",
+        "alt": "Paper Bags by Paras Prints Solutions",
+        "width": 1850,
+        "height": 850
+      },
       "order": 2,
       "primary": true,
       "printingOptions": [
@@ -350,6 +368,12 @@
         "Art paper — grade to be confirmed"
       ],
       "name": "Brochures",
+      "banner": {
+        "src": "/assets/Products%20Banner/Brochures.webp",
+        "alt": "Brochures by Paras Prints Solutions",
+        "width": 1850,
+        "height": 850
+      },
       "order": 3,
       "primary": true,
       "printingOptions": [
@@ -437,6 +461,12 @@
         "Cover and inner paper grades by enquiry"
       ],
       "name": "Catalogues",
+      "banner": {
+        "src": "/assets/Products%20Banner/Catalog.webp",
+        "alt": "Catalogues by Paras Prints Solutions",
+        "width": 1850,
+        "height": 850
+      },
       "order": 4,
       "primary": true,
       "printingOptions": [
@@ -522,6 +552,12 @@
         "Paper grades appropriate to the selected fold"
       ],
       "name": "Leaflets",
+      "banner": {
+        "src": "/assets/Products%20Banner/Leaflets.webp",
+        "alt": "Leaflets by Paras Prints Solutions",
+        "width": 1850,
+        "height": 850
+      },
       "order": 5,
       "primary": true,
       "printingOptions": [
@@ -589,6 +625,12 @@
       "industrySlugs": [],
       "materials": [],
       "name": "Writing Pads",
+      "banner": {
+        "src": "/assets/Products%20Banner/writing-pads.webp",
+        "alt": "Writing Pads by Paras Prints Solutions",
+        "width": 1847,
+        "height": 851
+      },
       "order": 6,
       "primary": false,
       "printingOptions": [],
@@ -641,6 +683,12 @@
       "industrySlugs": [],
       "materials": [],
       "name": "Digital Print",
+      "banner": {
+        "src": "/assets/Products%20Banner/digital-prints.webp",
+        "alt": "Digital Print by Paras Prints Solutions",
+        "width": 1850,
+        "height": 850
+      },
       "order": 7,
       "primary": false,
       "printingOptions": [],
@@ -693,6 +741,12 @@
       "industrySlugs": [],
       "materials": [],
       "name": "BOPP Tapes",
+      "banner": {
+        "src": "/assets/Products%20Banner/BOPP.webp",
+        "alt": "BOPP Tapes by Paras Prints Solutions",
+        "width": 1850,
+        "height": 850
+      },
       "order": 8,
       "primary": false,
       "printingOptions": [],

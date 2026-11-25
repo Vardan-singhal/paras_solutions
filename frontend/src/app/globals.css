@@ -1152,6 +1152,27 @@ body:has(dialog[open]) {
   border-bottom: 1px solid var(--line);
   padding: 28px 0 64px;
 }
+.page-hero--banner {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.page-hero__banner {
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.page-hero--banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, #fffffff5 0%, #ffffffd9 50%, #ffffff26 100%);
+}
+.page-hero--banner > .container {
+  position: relative;
+  z-index: 2;
+}
 .breadcrumbs {
   list-style: none;
   padding: 0;
