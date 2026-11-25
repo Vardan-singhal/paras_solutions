@@ -1173,6 +1173,15 @@ body:has(dialog[open]) {
   position: relative;
   z-index: 2;
 }
+.page-hero.page-hero--image {
+  padding: 0;
+}
+.page-hero--image::before {
+  display: none;
+}
+.page-hero--image .page-hero__banner {
+  object-fit: cover;
+}
 .breadcrumbs {
   list-style: none;
   padding: 0;

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { api, content } from '@/lib/api';
 import { PageHero, ArticleCard, EmptyState, CTA } from './UI';
+import pageBanners from '@/data/page-banners.json';
 export default async function ResourceListing({ type, searchParams }) {
   const cases = type === 'case-studies';
   const endpoint = cases ? '/case-studies' : '/blogs';
@@ -17,6 +18,8 @@ export default async function ResourceListing({ type, searchParams }) {
   return (
     <>
       <PageHero
+        banner={pageBanners[`/${type}`]}
+        bannerOnly={Boolean(pageBanners[`/${type}`])}
         eyebrow={cases ? 'PROJECTS & APPLICATIONS' : 'THE PACKAGING JOURNAL'}
         title={
           cases

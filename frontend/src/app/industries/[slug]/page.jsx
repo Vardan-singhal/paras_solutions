@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { content, metadata } from '@/lib/api';
 import { PageHero, SectionHeading, ProductGrid, FAQ, CTA, Button } from '@/components/UI';
+import pageBanners from '@/data/page-banners.json';
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const i = await content('/industries/' + encodeURIComponent(slug), { missingIs404: true });
@@ -10,12 +11,15 @@ export default async function Industry({ params }) {
   const { slug } = await params;
   const i = await content('/industries/' + encodeURIComponent(slug), { missingIs404: true });
   const all = await content('/products?limit=100');
+  const banner = pageBanners['/industries/' + i.slug];
   return (
     <>
       <PageHero
         eyebrow="INDUSTRY APPLICATIONS"
         title={i.name}
         lead={i.summary}
+        banner={banner}
+        bannerOnly={Boolean(banner)}
         crumbs={[{ label: 'Industries', href: '/industries' }, { label: i.name }]}
       />
       <section className="section">
@@ -29,8 +33,6 @@ export default async function Industry({ params }) {
                 width={i.image.width}
                 height={i.image.height}
                 sizes="(max-width:991px) 100vw,50vw"
-                loading="eager"
-                fetchPriority="high"
               />
               <p className="image-note">Illustrative industry visual.</p>
             </div>

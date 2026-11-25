@@ -1,0 +1,92 @@
+{
+  "/about": {
+    "src": "/assets/Banner/About-us-24e6230b8bb2.webp",
+    "alt": "About Paras Prints Solutions",
+    "width": 2172,
+    "height": 724
+  },
+  "/manufacturing-process": {
+    "src": "/assets/Banner/Manufacturing.webp",
+    "alt": "Manufacturing process at Paras Prints Solutions",
+    "width": 2172,
+    "height": 724
+  },
+  "/infrastructure": {
+    "src": "/assets/Banner/Infrastructure.webp",
+    "alt": "Infrastructure and printing machinery at Paras Prints Solutions",
+    "width": 2172,
+    "height": 724
+  },
+  "/quality-assurance": {
+    "src": "/assets/Banner/Quality%20Assurance-96700598c519.webp",
+    "alt": "Quality assurance at Paras Prints Solutions",
+    "width": 2172,
+    "height": 724
+  },
+  "/contact": {
+    "src": "/assets/Banner/Contact-6936a23f019b.webp",
+    "alt": "Contact Paras Prints Solutions about packaging and commercial print",
+    "width": 2172,
+    "height": 724
+  },
+  "/industries/electrical-electronics": {
+    "src": "/assets/Banner/Electronic.webp",
+    "alt": "Electrical and electronics packaging",
+    "width": 2172,
+    "height": 724
+  },
+  "/industries/automotive": {
+    "src": "/assets/Banner/Automotive.webp",
+    "alt": "Automotive packaging for components and replacement parts",
+    "width": 2172,
+    "height": 724
+  },
+  "/industries/pharmaceuticals": {
+    "src": "/assets/Banner/Pharmaeuticals.webp",
+    "alt": "Pharmaceutical packaging",
+    "width": 2172,
+    "height": 724
+  },
+  "/industries/food-beverages": {
+    "src": "/assets/Banner/Food%20beverages.webp",
+    "alt": "Food and beverage packaging",
+    "width": 2172,
+    "height": 724
+  },
+  "/industries/fmcg": {
+    "src": "/assets/Banner/FMCG.webp",
+    "alt": "FMCG and retail packaging",
+    "width": 2172,
+    "height": 724
+  },
+  "/industries/ecommerce": {
+    "src": "/assets/Banner/Ecommerce.webp",
+    "alt": "E-commerce mailers and shipping cartons",
+    "width": 2172,
+    "height": 724
+  },
+  "/blog": {
+    "src": "/assets/Banner/Blog.webp",
+    "alt": "Packaging and printing journal",
+    "width": 2170,
+    "height": 725
+  },
+  "/case-studies": {
+    "src": "/assets/Banner/Case-studies.webp",
+    "alt": "Packaging and printing case studies",
+    "width": 2170,
+    "height": 725
+  },
+  "/downloads": {
+    "src": "/assets/Banner/Downloads.webp",
+    "alt": "Downloads and company documents",
+    "width": 2172,
+    "height": 724
+  },
+  "/faq": {
+    "src": "/assets/Banner/FAQ.webp",
+    "alt": "Frequently asked questions about packaging and commercial printing",
+    "width": 2172,
+    "height": 724
+  }
+}

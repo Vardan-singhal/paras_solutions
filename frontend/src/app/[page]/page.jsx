@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { content, metadata } from '@/lib/api';
 import { PageHero, FAQ, ContentBlocks, CTA } from '@/components/UI';
+import pageBanners from '@/data/page-banners.json';
 const allowed = ['faq', 'privacy-policy', 'terms-and-conditions'];
 export async function generateMetadata({ params }) {
   const { page } = await params;
@@ -15,7 +16,12 @@ export default async function TextPage({ params }) {
   const categories = [...new Set(p.faqs.map((f) => f.category))];
   return (
     <>
-      <PageHero {...p} crumbs={[{ label: page === 'faq' ? 'FAQ' : p.title }]} />
+      <PageHero
+        {...p}
+        banner={pageBanners['/' + page]}
+        bannerOnly={Boolean(pageBanners['/' + page])}
+        crumbs={[{ label: page === 'faq' ? 'FAQ' : p.title }]}
+      />
       <section className="section">
         <div className="container narrow-content">
           <ContentBlocks blocks={p.blocks} />

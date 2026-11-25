@@ -2,6 +2,7 @@ import { content, metadata } from '@/lib/api';
 import { PageHero, ContentBlocks, FAQ, CTA, SectionHeading } from '@/components/UI';
 import Reveal from '@/components/Reveal';
 import machines from '@/data/infrastructure-machines.json';
+import pageBanners from '@/data/page-banners.json';
 export async function generateMetadata() {
   const p = await content('/pages/infrastructure');
   return metadata('Infrastructure & Machinery', p.lead, '/infrastructure');
@@ -10,7 +11,12 @@ export default async function Infrastructure() {
   const p = await content('/pages/infrastructure');
   return (
     <>
-      <PageHero {...p} crumbs={[{ label: 'Infrastructure' }]} />
+      <PageHero
+        {...p}
+        banner={pageBanners['/infrastructure']}
+        bannerOnly
+        crumbs={[{ label: 'Infrastructure' }]}
+      />
       <section className="section">
         <div className="container">
           <ContentBlocks blocks={p.blocks} />

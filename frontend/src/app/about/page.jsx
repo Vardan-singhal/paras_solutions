@@ -3,6 +3,7 @@ import { content, metadata } from '@/lib/api';
 import { PageHero, CTA, SectionHeading, Button } from '@/components/UI';
 import CompanyTimeline from '@/components/CompanyTimeline';
 import Reveal from '@/components/Reveal';
+import pageBanners from '@/data/page-banners.json';
 export async function generateMetadata() {
   const p = await content('/pages/about');
   return metadata('About Us | Packaging & Print Since 1996', p.lead, '/about');
@@ -14,7 +15,12 @@ export default async function About() {
   ]);
   return (
     <>
-      <PageHero {...page} crumbs={[{ label: 'About us' }]} />
+      <PageHero
+        {...page}
+        banner={pageBanners['/about']}
+        bannerOnly
+        crumbs={[{ label: 'About us' }]}
+      />
       <section className="section">
         <div className="container">
           <div className="row g-5">

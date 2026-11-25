@@ -41,7 +41,15 @@ export function SectionHeading({
     </div>
   );
 }
-export function PageHero({ eyebrow, title, lead, crumbs = [], banner, children }) {
+export function PageHero({
+  eyebrow,
+  title,
+  lead,
+  crumbs = [],
+  banner,
+  bannerOnly = false,
+  children,
+}) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -56,7 +64,14 @@ export function PageHero({ eyebrow, title, lead, crumbs = [], banner, children }
     ],
   };
   return (
-    <section className={`page-hero${banner ? ' page-hero--banner' : ''}`}>
+    <section
+      className={`page-hero${banner ? ' page-hero--banner' : ''}${bannerOnly ? ' page-hero--image' : ''}`}
+      style={
+        bannerOnly && banner
+          ? { aspectRatio: `${banner.width} / ${banner.height * 0.8}` }
+          : undefined
+      }
+    >
       {banner && (
         <Image
           className="page-hero__banner"
@@ -69,7 +84,7 @@ export function PageHero({ eyebrow, title, lead, crumbs = [], banner, children }
         />
       )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(schema) }} />
-      <div className="container">
+      <div className={`container${bannerOnly ? ' visually-hidden' : ''}`}>
         <nav aria-label="Breadcrumb">
           <ol className="breadcrumbs">
             <li>

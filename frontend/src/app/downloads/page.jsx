@@ -1,6 +1,7 @@
 import { Download, ArrowUpRight } from 'lucide-react';
 import { content } from '@/lib/api';
 import { PageHero, CTA } from '@/components/UI';
+import pageBanners from '@/data/page-banners.json';
 export const metadata = {
   title: 'Downloads | Company Profile',
   description:
@@ -12,6 +13,8 @@ export default async function Downloads() {
   return (
     <>
       <PageHero
+        banner={pageBanners['/downloads']}
+        bannerOnly
         eyebrow="THE RESOURCE LIBRARY"
         title="A closer look, to take with you."
         lead="Available company documents. Historical details and claims in the supplied profile should be confirmed with the team before placing an order."

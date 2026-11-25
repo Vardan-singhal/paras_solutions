@@ -2,6 +2,7 @@ import { content, metadata } from '@/lib/api';
 import { PageHero, ContentBlocks, CTA, SectionHeading } from '@/components/UI';
 import Gallery from '@/components/Gallery';
 import Reveal from '@/components/Reveal';
+import pageBanners from '@/data/page-banners.json';
 export async function generateMetadata() {
   const p = await content('/pages/quality-assurance');
   return metadata('Quality Assurance', p.lead, '/quality-assurance');
@@ -14,7 +15,12 @@ export default async function Quality() {
   ]);
   return (
     <>
-      <PageHero {...p} crumbs={[{ label: 'Quality assurance' }]} />
+      <PageHero
+        {...p}
+        banner={pageBanners['/quality-assurance']}
+        bannerOnly
+        crumbs={[{ label: 'Quality assurance' }]}
+      />
       <section className="section">
         <div className="container">
           <div className="row g-4">

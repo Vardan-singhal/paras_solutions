@@ -1,6 +1,7 @@
 import { content } from '@/lib/api';
 import { PageHero, FAQ, SectionHeading } from '@/components/UI';
 import LeadForm from '@/components/LeadForm';
+import pageBanners from '@/data/page-banners.json';
 import { ArrowUpRight, Phone, Mail, MapPin } from 'lucide-react';
 export const metadata = {
   title: 'Contact Us | Paras Prints Solutions, Ghaziabad',
@@ -16,6 +17,8 @@ export default async function Contact() {
       <PageHero
         eyebrow="A DIRECT CONVERSATION"
         title="Tell us what you’re working on."
+        banner={pageBanners['/contact']}
+        bannerOnly
         lead="A new pack, a revised specification or a commercial print requirement. Start a conversation with the Paras Prints Solutions team."
         crumbs={[{ label: 'Contact' }]}
       />
