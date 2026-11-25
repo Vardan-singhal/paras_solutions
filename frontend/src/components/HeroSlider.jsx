@@ -1,24 +1,34 @@
 'use client';
 import Image from 'next/image';
-import { useEffect, useState, useRef } from 'react';
-import useReducedMotion from '@/lib/use-reduced-motion';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowLeft, ArrowRight, Pause, Play } from 'lucide-react';
 export default function HeroSlider({ slides }) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
-  const [manualPlay, setManualPlay] = useState(false);
   const [prepared, setPrepared] = useState(false);
-  const reduced = useReducedMotion();
-  const ref = useRef(null);
-  const playing = !paused && (!reduced || manualPlay);
+  const slider = useRef(null);
+  const playing = !paused;
+  useEffect(() => {
+    const headerElements = [...document.querySelectorAll('.topbar, .site-header')];
+    const fitBelowHeader = () => {
+      const headerHeight = headerElements.reduce(
+        (height, element) => height + element.getBoundingClientRect().height,
+        0,
+      );
+      slider.current?.style.setProperty('--hero-header-height', `${headerHeight}px`);
+    };
+    fitBelowHeader();
+    const observer = new ResizeObserver(fitBelowHeader);
+    headerElements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
   useEffect(() => {
     if (!playing || slides.length < 2) return;
     const timer = window.setInterval(() => {
-      if (!document.hidden && (!ref.current?.contains(document.activeElement) || manualPlay))
-        setIndex((i) => (i + 1) % slides.length);
+      if (!document.hidden) setIndex((i) => (i + 1) % slides.length);
     }, 5000);
     return () => window.clearInterval(timer);
-  }, [playing, slides.length, manualPlay]);
+  }, [playing, slides.length]);
   const go = (delta) => setIndex((i) => (i + delta + slides.length) % slides.length);
   const arrowKeys = (event) => {
     if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
@@ -26,10 +36,12 @@ export default function HeroSlider({ slides }) {
       go(event.key === 'ArrowRight' ? 1 : -1);
     }
   };
+  if (!slides.length) return null;
+
   return (
     <div
       className="hero-slider"
-      ref={ref}
+      ref={slider}
       role="region"
       aria-roledescription="carousel"
       aria-label="Packaging and print showcase"
@@ -49,16 +61,35 @@ export default function HeroSlider({ slides }) {
                 src={image.src}
                 alt={image.alt}
                 fill
-                sizes="(max-width:991px) calc(100vw - 48px), (max-width:1399px) 49vw, 650px"
-                loading={i === 0 ? 'eager' : 'lazy'}
+                sizes="100vw"
+                loading={i === 0 || i === index ? 'eager' : 'lazy'}
                 fetchPriority={i === 0 ? 'high' : 'low'}
                 onLoad={i === 0 ? () => setPrepared(true) : undefined}
               />
             )}
           </div>
         ))}
-        <span className="hero-image-label">Packaging & print · Representative visuals</span>
       </div>
+      {slides.length > 1 && (
+        <>
+          <button
+            className="hero-slider__arrow hero-slider__arrow--previous"
+            onKeyDown={arrowKeys}
+            aria-label="Previous slide"
+            onClick={() => go(-1)}
+          >
+            <ArrowLeft size={22} />
+          </button>
+          <button
+            className="hero-slider__arrow hero-slider__arrow--next"
+            onKeyDown={arrowKeys}
+            aria-label="Next slide"
+            onClick={() => go(1)}
+          >
+            <ArrowRight size={22} />
+          </button>
+        </>
+      )}
       <div className="slider-controls">
         <span className="slider-count">
           {String(index + 1).padStart(2, '0')}{' '}
@@ -80,18 +111,9 @@ export default function HeroSlider({ slides }) {
           <button
             onKeyDown={arrowKeys}
             aria-label={playing ? 'Pause slideshow' : 'Play slideshow'}
-            onClick={() => {
-              setPaused(playing);
-              if (!playing) setManualPlay(true);
-            }}
+            onClick={() => setPaused(playing)}
           >
             {playing ? <Pause size={15} /> : <Play size={15} />}
-          </button>
-          <button onKeyDown={arrowKeys} aria-label="Previous slide" onClick={() => go(-1)}>
-            <ArrowLeft size={18} />
-          </button>
-          <button onKeyDown={arrowKeys} aria-label="Next slide" onClick={() => go(1)}>
-            <ArrowRight size={18} />
           </button>
         </div>
       </div>

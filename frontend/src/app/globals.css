@@ -546,51 +546,23 @@ body:has(dialog[open]) {
 .search-results p {
   margin: 0;
 }
-/* Hero and consistent autoplay controls. */
+/* Full-width hero: every slide shares one fixed aspect ratio. */
 .home-hero {
   background: var(--soft);
-  padding: 66px 0 64px;
-}
-.hero-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr);
-  gap: 52px;
-  align-items: center;
-}
-.hero-copy h1 {
-  font-size: clamp(2.4rem, 4.2vw, 4.2rem);
-  line-height: 1.08;
-  letter-spacing: -0.06em;
-}
-.hero-copy h1 span {
-  color: var(--accent);
-}
-.hero-copy .eyebrow {
-  font-size: 0.62rem;
-  letter-spacing: 0.12em;
-}
-.hero-lead {
-  font-size: 1.02rem;
-  max-width: 48ch;
-}
-.hero-caption {
-  font-size: 0.72rem;
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin: 26px 0 0;
-}
-.hero-caption > span {
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
+  padding: 0;
 }
 .hero-slider {
+  position: relative;
+  width: 100%;
   min-width: 0;
+  isolation: isolate;
 }
 .hero-slider__stage {
   position: relative;
-  aspect-ratio: 1.06;
+  height: min(
+    calc(100vw / 2.75 + 118px),
+    calc(100svh - var(--hero-header-height, calc(var(--header-height) + 40px)))
+  );
   background: #e7e3dc;
   overflow: hidden;
 }
@@ -599,35 +571,62 @@ body:has(dialog[open]) {
   inset: 0;
   opacity: 0;
   transition: opacity 0.75s ease;
+  pointer-events: none;
 }
 .hero-slide.is-active {
   opacity: 1;
 }
 .hero-slide img {
-  object-fit: cover;
+  object-fit: fill;
+  object-position: center;
 }
-.hero-image-label {
+.hero-slider__arrow {
   position: absolute;
-  left: 18px;
-  bottom: 14px;
-  color: white;
-  background: #171717bd;
-  padding: 6px 9px;
-  font-size: 0.56rem;
-  letter-spacing: 0.05em;
-  max-width: calc(100% - 36px);
+  top: 50%;
+  transform: translateY(-50%);
+  width: clamp(32px, 3vw, 52px);
+  height: clamp(32px, 3vw, 52px);
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #ffffff80;
+  border-radius: 50%;
+  color: #29231e;
+  background: #ffffffc9;
+  box-shadow: 0 4px 18px #00000012;
+  backdrop-filter: blur(8px);
+  transition: background 0.2s ease;
+}
+.hero-slider__arrow--previous {
+  left: clamp(10px, 1.6vw, 30px);
+}
+.hero-slider__arrow--next {
+  right: clamp(10px, 1.6vw, 30px);
+}
+.hero-slider__arrow:hover {
+  background: #fff;
 }
 .slider-controls {
+  position: absolute;
+  bottom: clamp(8px, 1.6vw, 26px);
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 12px;
-  margin-top: 18px;
+  gap: 14px;
+  padding: 5px 12px;
+  border: 1px solid #ffffff80;
+  border-radius: 999px;
+  background: #ffffffe6;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 18px #0000000d;
 }
 .slider-count {
   font-size: 0.73rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 .slider-count > span {
   color: var(--muted);
@@ -640,7 +639,7 @@ body:has(dialog[open]) {
 }
 .slider-dots button {
   position: relative;
-  width: 30px;
+  width: 24px;
   height: 28px;
   border: 0;
   padding: 0;
@@ -651,27 +650,28 @@ body:has(dialog[open]) {
   position: absolute;
   left: 0;
   right: 0;
-  top: 13px;
-  height: 2px;
-  background: #ccc;
+  top: 12px;
+  height: 3px;
+  border-radius: 3px;
+  background: #c9c4be;
 }
 .slider-dots button.is-active::after {
   background: var(--accent);
 }
 .slider-buttons {
   display: flex;
-  gap: 6px;
 }
 .slider-buttons button {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
   background: transparent;
   display: grid;
   place-items: center;
-  border: 1px solid #c9c7c2;
+  border: 0;
+  border-radius: 50%;
 }
 .slider-buttons button:hover {
-  border-color: var(--accent);
   color: var(--accent);
 }
 .trust-section {
@@ -2037,20 +2037,6 @@ body:has(dialog[open]) {
   }
 }
 @media (max-width: 1199px) {
-  .hero-layout {
-    gap: 32px;
-  }
-  .hero-copy h1 {
-    font-size: 3.1rem;
-  }
-  .hero-copy .button-row {
-    gap: 10px;
-  }
-  .hero-copy .button {
-    font-size: 0.75rem;
-    padding: 13px 16px;
-    gap: 12px;
-  }
   .benefits-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px;
@@ -2071,22 +2057,6 @@ body:has(dialog[open]) {
 @media (max-width: 991px) {
   .section {
     padding: 64px 0;
-  }
-  .hero-layout {
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-  .hero-copy {
-    max-width: 720px;
-  }
-  .hero-copy h1 {
-    font-size: clamp(2.5rem, 7vw, 4rem);
-  }
-  .hero-slider__stage {
-    aspect-ratio: 1.5;
-  }
-  .home-hero {
-    padding: 45px 0;
   }
   .trust-grid {
     gap: 20px;
@@ -2218,15 +2188,6 @@ body:has(dialog[open]) {
   .topbar {
     font-size: 0.55rem;
     letter-spacing: 0.04em;
-  }
-  .hero-copy h1 {
-    font-size: clamp(2.35rem, 8.5vw, 3.4rem);
-  }
-  .hero-lead {
-    font-size: 0.96rem;
-  }
-  .hero-slider__stage {
-    aspect-ratio: 1.2;
   }
   .trust-grid {
     grid-template-columns: 1fr;
@@ -2369,29 +2330,10 @@ body:has(dialog[open]) {
   .section {
     padding: 52px 0;
   }
-  .home-hero {
-    padding: 34px 0 28px;
-  }
-  .hero-layout {
-    gap: 30px;
-  }
-  .hero-copy .eyebrow {
-    font-size: 0.54rem;
-    letter-spacing: 0.09em;
-  }
-  .hero-copy h1 {
-    font-size: 2.45rem;
-  }
   .button {
     padding: 14px 18px;
     font-size: 0.78rem;
     gap: 14px;
-  }
-  .hero-copy .button-row .button {
-    flex: 1 1 145px;
-  }
-  .hero-caption {
-    font-size: 0.64rem;
   }
   .slider-dots button {
     width: 22px;
@@ -2549,9 +2491,6 @@ body:has(dialog[open]) {
     flex-wrap: wrap;
     gap: 3px;
     padding-block: 7px;
-  }
-  .hero-copy h1 {
-    font-size: 2.05rem;
   }
   .industry-grid {
     grid-template-columns: 1fr;

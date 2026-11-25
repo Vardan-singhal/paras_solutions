@@ -3249,24 +3249,24 @@
     "home": {
       "slides": [
         {
-          "src": "/assets/hero-product-showcase.jpg",
-          "alt": "Representative printed packaging",
-          "width": 1200,
-          "height": 896,
+          "src": "/assets/Banner/1-eaea91bb7a4a.webp",
+          "alt": "Paras Prints Solutions packaging and print range with cartons, paper bags and brochures",
+          "width": 1851,
+          "height": 849,
           "kind": "illustrative"
         },
         {
-          "src": "/assets/hero-showcase.jpg",
-          "alt": "Representative custom kraft and white cartons",
-          "width": 1376,
-          "height": 768,
+          "src": "/assets/Banner/2-d040236316f4.webp",
+          "alt": "Paras Prints Solutions printed lighting cartons and protective corrugated packaging",
+          "width": 1851,
+          "height": 849,
           "kind": "illustrative"
         },
         {
-          "src": "/assets/packaging-products-group.jpg",
-          "alt": "Representative packaging and print range",
-          "width": 512,
-          "height": 345,
+          "src": "/assets/Banner/3-240c94403f3c.webp",
+          "alt": "Paras Prints Solutions premium boxes, corrugated cartons, paper bags and catalogues",
+          "width": 1851,
+          "height": 850,
           "kind": "illustrative"
         }
       ],

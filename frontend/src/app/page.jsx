@@ -39,32 +39,11 @@ export default async function HomePage() {
           }),
         }}
       />
-      <section className="home-hero">
-        <div className="container hero-layout">
-          <Reveal className="hero-copy">
-            <p className="eyebrow">{home.eyebrow}</p>
-            <h1>
-              {home.title.split('. ')[0]}
-              {home.title.includes('. ') && (
-                <>
-                  .<br />
-                  <span>{home.title.split('. ').slice(1).join('. ')}</span>
-                </>
-              )}
-            </h1>
-            <p className="hero-lead">{home.lead}</p>
-            <div className="button-row">
-              <Button href="/products">Explore our products</Button>
-              <Button href="/request-a-quote" secondary>
-                Request a quote
-              </Button>
-            </div>
-            <p className="hero-caption">
-              <span /> Built around your product. Since {company.established}.
-            </p>
-          </Reveal>
-          <HeroSlider slides={settings.home.slides} />
-        </div>
+      <section className="home-hero" aria-labelledby="home-title">
+        <h1 id="home-title" className="visually-hidden">
+          {home.title}
+        </h1>
+        <HeroSlider slides={settings.home.slides} />
       </section>
       <section className="trust-section">
         <div className="container">
