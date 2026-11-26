@@ -1,6 +1,7 @@
 import { content } from '@/lib/api';
 import { PageHero, FAQ, SectionHeading } from '@/components/UI';
 import LeadForm from '@/components/LeadForm';
+import PhoneLinks from '@/components/PhoneLinks';
 import pageBanners from '@/data/page-banners.json';
 import { ArrowUpRight, Phone, Mail, MapPin } from 'lucide-react';
 export const metadata = {
@@ -30,7 +31,7 @@ export default async function Contact() {
                 <div>
                   <Phone size={22} />
                   <h2>Call the team</h2>
-                  <a href={c.phoneHref}>{c.phone}</a>
+                  <PhoneLinks company={c} />
                 </div>
                 <div>
                   <Mail size={22} />

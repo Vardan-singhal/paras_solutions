@@ -279,9 +279,12 @@ export function ArticleCard({ article, type = 'blog', headingLevel = 'h3' }) {
         <Link href={`/${type}/${article.slug}`}>{article.title}</Link>
       </Heading>
       <p>{article.excerpt}</p>
-      <Link className="text-link" href={`/${type}/${article.slug}`}>
-        Read <span className="visually-hidden">{article.title}</span> article{' '}
-        <ArrowRight size={16} />
+      <Link
+        className="text-link"
+        href={`/${type}/${article.slug}`}
+        aria-label={`Read article: ${article.title}`}
+      >
+        Read article <ArrowRight size={16} />
       </Link>
     </article>
   );

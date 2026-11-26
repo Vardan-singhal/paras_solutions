@@ -43,12 +43,12 @@ const milestones = [
   {
     year: '2025',
     title: 'Room for the next chapter',
-    text: 'Expanded into a 30,000 sq ft manufacturing unit. Added a Komori 20 × 28 6-colour press with coater and a Vitaya Graphics folder gluer.',
+    text: 'Expanded into a 30,000 sq ft manufacturing unit. Added a Komori 20 × 28 6-colour press with a coater and a Vajaya Graphics folder gluer.',
   },
   {
     year: '2026',
     title: 'The next stage of growth',
-    text: 'Purchased a Komori 640 28 × 40, an imported 3-ply automatic flute laminator and two die-cutting machines with automatic feeders.',
+    text: 'Purchased a Komori 640 28 × 40 press, an imported 3-ply automatic flute laminator and two die-cutting machines with automatic feeders.',
   },
 ];
 

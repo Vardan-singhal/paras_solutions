@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import PhoneLinks from './PhoneLinks';
 import { ArrowUpRight } from 'lucide-react';
 export default function Footer({ company, products, industries }) {
   return (
@@ -65,7 +66,7 @@ export default function Footer({ company, products, industries }) {
           <div className="col-lg-3">
             <h2>Get in touch</h2>
             <address>
-              <a href={company.phoneHref}>{company.phone}</a>
+              <PhoneLinks company={company} />
               <a href={company.emailHref}>{company.email}</a>
               <p>{company.address}</p>
             </address>

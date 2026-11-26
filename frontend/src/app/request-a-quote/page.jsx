@@ -1,6 +1,7 @@
 import { content } from '@/lib/api';
 import { PageHero, FAQ } from '@/components/UI';
 import LeadForm from '@/components/LeadForm';
+import PhoneLinks from '@/components/PhoneLinks';
 export const metadata = {
   title: 'Request a Quote | Packaging & Print',
   description:
@@ -43,9 +44,7 @@ export default async function Quote({ searchParams }) {
                 <p>
                   Not sure about a specification? Describe the product and ask for a recommendation.
                 </p>
-                <a className="text-link" href={settings.company.phoneHref}>
-                  {settings.company.phone}
-                </a>
+                <PhoneLinks company={settings.company} />
                 <FAQ
                   items={settings.faqs.filter((f) => ['Orders', 'Artwork'].includes(f.category))}
                 />

@@ -198,7 +198,7 @@ export default function LeadForm({
             <div className="col-md-6">
               <Field
                 name="dimensions"
-                label="Dimensions and unit"
+                label="Dimensions and units"
                 placeholder="Length × width × height in mm"
                 maxLength={300}
                 defaultValue={initial.dimensions || ''}

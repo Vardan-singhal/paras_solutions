@@ -1,6 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import PhoneLinks from './PhoneLinks';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown, ArrowUpRight, Search, ArrowRight } from 'lucide-react';
@@ -101,7 +102,7 @@ function Navigation({ company, products, categories, industries, pathname }) {
       <div className="topbar">
         <div className="container">
           <span>PACKAGING & COMMERCIAL PRINT · GHAZIABAD</span>
-          <a href={company.phoneHref}>{company.phone}</a>
+          <PhoneLinks company={company} className="phone-links--header" />
         </div>
       </div>
       <header className="site-header" ref={header}>

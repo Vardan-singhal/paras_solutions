@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Analytics from '@/components/Analytics';
 import RevealEffects from '@/components/RevealEffects';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import { content, siteUrl, jsonLd } from '@/lib/api';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 import './globals.css';
@@ -36,7 +37,7 @@ export default async function RootLayout({ children }) {
     name: company.name,
     url: siteUrl(),
     logo: siteUrl() + '/assets/logo.webp',
-    telephone: company.phone,
+    telephone: company.phones.map(({ number }) => number),
     email: company.email,
   };
   return (
@@ -46,7 +47,7 @@ export default async function RootLayout({ children }) {
           Skip to content
         </a>
         <Header
-          company={{ phone: company.phone, phoneHref: company.phoneHref }}
+          company={{ phone: company.phone, phoneHref: company.phoneHref, phones: company.phones }}
           products={products.map(({ slug, name, categorySlug, summary }) => ({
             slug,
             name,
@@ -58,6 +59,7 @@ export default async function RootLayout({ children }) {
         />
         <main id="main">{children}</main>
         <Footer company={company} products={products} industries={industries} />
+        <WhatsAppButton href={company.whatsapp} />
         <Analytics />
         <RevealEffects />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(schema) }} />

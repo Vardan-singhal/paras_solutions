@@ -7,7 +7,7 @@ export default function GlobalError({ reset }) {
         <p>The website content is temporarily unavailable. Please try again shortly.</p>
         <button onClick={reset}>Try again</button>
         <p>
-          <a href="mailto:info@parasprints.com">info@parasprints.com</a>
+          <a href="mailto:parasprintssolutions@gmail.com">parasprintssolutions@gmail.com</a>
         </p>
       </body>
     </html>

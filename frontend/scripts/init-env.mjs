@@ -40,8 +40,8 @@ SMTP_PORT=587
 SMTP_SECURE=false
 SMTP_USER=
 SMTP_PASS=
-SMTP_FROM=info@parasprints.com
-NOTIFICATION_EMAIL=info@parasprints.com
+SMTP_FROM=parasprintssolutions@gmail.com
+NOTIFICATION_EMAIL=parasprintssolutions@gmail.com
 
 # Optional tracking and ownership verification; blank keeps them disabled.
 NEXT_PUBLIC_GA_ID=

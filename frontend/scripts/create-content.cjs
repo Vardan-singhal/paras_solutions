@@ -221,7 +221,7 @@ const details = {
     specifications: [
       {
         label: 'Published page range',
-        value: 'Up to 240+ pages; binding suitability to be confirmed',
+        value: '240+ pages; binding suitability to be confirmed',
       },
       { label: 'Binding choices', value: 'Saddle stitch, Wire-O and PUR perfect binding' },
       {
@@ -314,7 +314,7 @@ const products = old.items.map((p, i) => {
     ...specific,
     seo: {
       title: `${key === 'duplex-boxes' ? 'Duplex Boxes' : p.name} | Custom Packaging & Print`,
-      description: p.summary.slice(0, 155),
+      description: p.summary,
     },
   };
 });
@@ -479,7 +479,9 @@ const industries = [
     faqs: [
       faq(
         'What should I include in an enquiry?',
-        requirements.join('; ') + '. Attach approved drawings or artwork where available.',
+        'Include ' +
+          requirements.map((text) => text[0].toLowerCase() + text.slice(1)).join('; ') +
+          '. Attach approved drawings or artwork where available.',
       ),
       faq(
         'How is the final specification confirmed?',
@@ -628,7 +630,7 @@ const pages = [
       { type: 'heading', text: 'Retention and requests' },
       {
         type: 'paragraph',
-        text: 'Contact info@parasprints.com to ask about access, correction or deletion of information you have submitted. The company must confirm its retention schedule and any recordkeeping obligations. No fixed retention period is asserted here.',
+        text: 'Contact parasprintssolutions@gmail.com to ask about access, correction or deletion of information you have submitted. The company must confirm its retention schedule and any recordkeeping obligations. No fixed retention period is asserted here.',
       },
       { type: 'heading', text: 'Cookies and analytics' },
       {
@@ -671,7 +673,7 @@ const pages = [
       { type: 'heading', text: 'Business terms' },
       {
         type: 'paragraph',
-        text: 'Payment, cancellation, returns, warranties and dispute arrangements must be provided and agreed by the company in its order documents. They are not invented by this website. Contact info@parasprints.com for current business terms.',
+        text: 'Payment, cancellation, returns, warranties and dispute arrangements must be provided and agreed by the company in its order documents. They are not invented by this website. Contact parasprintssolutions@gmail.com for current business terms.',
       },
       {
         type: 'paragraph',
@@ -682,7 +684,7 @@ const pages = [
 ].map((p) => ({
   ...p,
   status: 'published',
-  seo: { title: p.title, description: p.lead.slice(0, 155) },
+  seo: { title: p.title, description: p.lead },
 }));
 const blogData = [
   [
@@ -798,14 +800,18 @@ const settings = {
     address: sourceContact.plantAddress,
     addressNote:
       'Please confirm the current visit and dispatch address with the team before travelling.',
-    phone: sourceContact.phonePrimary,
-    phoneHref: sourceContact.phonePrimaryHref,
-    email: sourceContact.email,
-    emailHref: sourceContact.emailHref,
-    whatsapp: 'https://wa.me/' + sourceContact.whatsappNumber,
+    phone: '+91 88263 81381',
+    phoneHref: 'tel:+918826381381',
+    phones: [
+      { number: '+91 88263 81381', href: 'tel:+918826381381' },
+      { number: '+91 95403 81381', href: 'tel:+919540381381' },
+      { number: '+91 87503 81381', href: 'tel:+918750381381' },
+    ],
+    email: 'parasprintssolutions@gmail.com',
+    emailHref: 'mailto:parasprintssolutions@gmail.com',
+    whatsapp: 'https://wa.me/918750381381',
     sourceUrl: 'https://parasprints-nu.vercel.app/',
-    sourceNote:
-      'Contact details are reproduced from the existing company website; the alternate address and dispatch line require confirmation.',
+    sourceNote: 'Phone numbers, email and WhatsApp contact updated as supplied by the company.',
     socialLinks: [],
   },
   home: {
@@ -842,7 +848,7 @@ const settings = {
     {
       title: 'Company profile',
       description:
-        'The 13 supplied company profile pages, combined into a PDF without altering their content. Historical details in this document should be confirmed with the company.',
+        'The 13-page company profile with updated contact details. Historical details in this document should be confirmed with the company.',
       url: '/downloads/paras-prints-company-profile.pdf',
       filename: 'paras-prints-company-profile.pdf',
       type: 'PDF',
@@ -961,7 +967,43 @@ const seed = {
       'Specifications are an enquiry brief, not an accepted order. Material suitability, minimum order quantity, pricing and delivery are confirmed by the company. Calculator limits are software input limits.',
   },
 };
-fs.writeFileSync('backend/data/catalog.json', JSON.stringify(seed, null, 2));
+// Preserve proofreading corrections when rebuilding content from archived source data.
+const copyCorrections = {
+  Vijaya: 'Vajaya',
+  computerized: 'computerised',
+  'wire-o binding': 'Wire-O binding',
+  'square back spine finish': 'a square-back spine finish',
+  'High contrast microscopic text legibility': 'High-contrast microscopic text legibility',
+  'Corrugated boxes, Duplex boxes, Gift Boxes, Monocartons, Paper Bags, and Corporate Print Assets.':
+    'corrugated boxes, duplex boxes, gift boxes, monocartons, paper bags and corporate print materials.',
+  'we are recognized': 'we are recognised',
+  'Komori 6-color litho printing with inline coating and Delta-E color proof matching.':
+    'Komori 6-colour litho printing with inline coating and Delta-E colour proof matching.',
+  'Combining printed top-sheets to corrugated single facer fluting with bio-starch glue.':
+    'Bonding printed top sheets to single-face corrugated board with bio-starch glue.',
+  'Combines printed top-sheets to corrugated fluting for litho-laminated cartons.':
+    'Bonds printed top sheets to corrugated board for litho-laminated cartons.',
+  'Digital flatbed plotter cuts physical plain samples for physical product fitting checks.':
+    'A digital flatbed plotter cuts unprinted samples to check product fit.',
+  'Automated Gluing & Stitch': 'Automated Gluing & Stitching',
+  'Digital Bursting Strength (BS), GSM analytical balance, and moisture testing.':
+    'Digital bursting strength (BS) testing, GSM measurement using an analytical balance, and moisture testing.',
+  'Strapped palletizing, shrink-wrapped moisture barrier, and scheduled fleet delivery.':
+    'Strapped pallets, shrink wrapping for moisture protection, and scheduled fleet delivery.',
+  'Binding lines for catalogues up to 240+ pages.': 'Binding lines for catalogues of 240+ pages.',
+};
+function proofread(value) {
+  if (typeof value === 'string') {
+    for (const [before, after] of Object.entries(copyCorrections))
+      value = value.replaceAll(before, after);
+    return value;
+  }
+  if (Array.isArray(value)) return value.map(proofread);
+  if (value && typeof value === 'object')
+    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, proofread(item)]));
+  return value;
+}
+fs.writeFileSync('backend/data/catalog.json', JSON.stringify(proofread(seed), null, 2) + '\n');
 console.log(
   `Created content inventory: ${products.length} products, ${industries.length} industries, ${gallery.length} assets.`,
 );
