@@ -527,7 +527,7 @@ const pages = [
     highlights: [
       { title: 'Since 1996', text: 'Company history as published in the source profile.' },
       {
-        title: 'Packaging + print',
+        title: 'Packaging + Print',
         text: 'Corrugated cartons, monocartons, bags and commercial literature.',
       },
       {
@@ -822,7 +822,7 @@ const settings = {
     ],
     highlights: [
       { title: 'Since 1996', text: 'A published history in packaging and print' },
-      { title: 'Packaging + print', text: 'From shipping cartons to product literature' },
+      { title: 'Packaging + Print', text: 'From shipping cartons to product literature' },
       { title: 'Made for your brief', text: 'Dimensions, materials, artwork and finishing' },
     ],
     benefits: [
