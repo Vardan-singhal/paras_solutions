@@ -43,7 +43,7 @@ const milestones = [
   {
     year: '2025',
     title: 'Room for the next chapter',
-    text: 'Expanded into a 30,000 sq ft manufacturing unit. Added a Komori 20 × 28 6-colour press with a coater and a Vajaya Graphics folder gluer.',
+    text: 'Expanded into a 30,000 sq ft manufacturing unit. Added a Komori 20 × 28 6-colour press with a coater and a Vijaya Graphics folder gluer.',
   },
   {
     year: '2026',
