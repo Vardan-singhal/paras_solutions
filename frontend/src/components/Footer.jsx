@@ -95,6 +95,12 @@ export default function Footer({ company, products, industries }) {
               Analytics preferences
             </button>
           </div>
+          <span>
+            Designed and Developed by{' '}
+            <a href="https://arkatechnovation.com" target="_blank" rel="noreferrer">
+              Arka Technovation Pvt. Ltd.
+            </a>
+          </span>
         </div>
       </div>
     </footer>
